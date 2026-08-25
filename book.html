@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Class</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #171717;
+            color: white;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .booking-box {
+            width: 450px;
+            padding: 30px;
+            background-color: #222;
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            margin-top: 15px;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #555;
+            border-radius: 5px;
+            background-color: #333;
+            color: white;
+            font-size: 15px;
+        }
+
+        .book-btn {
+            width: 100%;
+            padding: 12px;
+            margin-top: 25px;
+            border: none;
+            border-radius: 5px;
+            background-color: #f45135;
+            color: white;
+            font-size: 17px;
+            cursor: pointer;
+        }
+
+        .book-btn:hover {
+            background-color: #ff654d;
+        }
+
+        .back {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #aaa;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="booking-box">
+
+        <h1>Book Your Class</h1>
+
+        <form>
+
+            <label>Name</label>
+            <input type="text" placeholder="Enter your name" required>
+
+            <label>Phone Number</label>
+            <input type="tel" placeholder="Enter phone number" required>
+
+            <label>Select Class</label>
+            <select required>
+                <option value="">Select Class</option>
+                <option>Base Endurance</option>
+                <option>Base Hit</option>
+                <option>Base strength</option>
+                <option>Strength Training</option>
+                <option>Weight Loss</option>
+            </select>
+
+            <label>Select Date</label>
+            <input type="date" required>
+
+            <label>Select Time</label>
+            <select required>
+                <option value="">Select Time</option>
+                <option>06:00 AM</option>
+                <option>08:00 AM</option>
+                <option>05:00 PM</option>
+                <option>07:00 PM</option>
+            </select>
+
+            <button type="submit" class="book-btn">
+                Book Now
+            </button>
+
+        </form>
+
+        <a href="index.html" class="back">← Back to Home</a>
+
+    </div>
+
+</body>
+</html>
