@@ -1,148 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Registration</title>
+
     <style>
-        .nav1{
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            overflow-x: hidden;
+        }
+
+
+        /* ========================= */
+        /* NAVBAR */
+        /* ========================= */
+
+        .nav1 {
             color: white;
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 20px;
-            position:sticky;
-            top:0;
-            background-color: #000000; 
-             z-index: 99999;
-             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-            
+            position: sticky;
+            top: 0;
+            background-color: #000000;
+            z-index: 99999;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         }
-       
-        .nav2{
-            display:flex;
-            gap:10%;
-            
-        }
-       .logo{
-           height:80px;
-           width:80px;
-           border-radius: 50px;
-       }
-       .logo1{
-         height:80px;
-           width:80px;
-           border-radius: 50px;
-           margin-left: 10%;
-           display: flex;
-           gap:5%;
-       }
-       .logo img{
-        text-align: center;
-       }
-    
-       .nav3{
-         font-size: 20px;
-         font-weight: 100px;
-         
-       }
-       .nav3 a:hover{
-        color:white;
 
-       }
-       .nav3 a{
-        text-decoration: none;
-        color: #FF4D00;
-       }
-        .bas {
-        color:#FF4D00;
-        font-family: 'Times New Roman', Times, serif;
-        font-weight: bold;
-        font-size: 90px;
-        margin-top: 100px;
-        background-color: black;
-        margin-left: auto;
-        margin-right: auto;
+        .nav2 {
+            display: flex;
+            gap: 20px;
+            align-items: center;
         }
-       .bill2{
-        background-color:white;
-        color:black;
-        font-size: 18px;
-        height:20px;
-        width:190px;
-        padding:20px;
-        border-radius:10px;
-        text-decoration: none;
-        display:block;
-        margin-top: 20px;
-        margin-left:20px;
-       }
-       .vis{
-         color:white;
-       }
-       li,a{
-        list-style: none;
-        text-align: center;
-        font-size: 20px;
-        text-decoration: none;
-        color:white;
-       }
-       .vis a:hover{
-        color:blue;
-       }
-       .bill2:hover{
-        background-color:#FF4D00;
-       }
-       #reg{
-        color:white;
-       }
-       #form{
-        color:orangered;
-        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        font-size: 30px;
-        font-weight: bolder;
-       }
-      .box{
-        background-color:red;
-        height:600px;
-        width:400px;
-      }
-      #field{
-        height:570px;
-        width:700px;
-        background-color: white;
-        border:grey 5px solid;
-        text-align: center;
-        margin-top:5%;
-        margin-left:27%;
-        padding-top: 5px;
-      }
- 
-.but{
-  border:solid 2px black;
-  color:black;
-  width:100px;
-  border-radius: 3px;
-}
-.but:hover{
-  background-color: blue;
-}
-.but1:hover{
-  background-color: blue;
-}
-.but1{
-  border:solid 2px black;
-  width:100px;
-  border-radius:3px;
-  margin-left: 30px;
-} 
-input:focus{
-  background-color: aquamarine;
-}
-form {
+
+        .logo {
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+        }
+
+        .nav2 h1 {
+            margin: 0;
+        }
+
+        .nav3 {
+            font-size: 20px;
+        }
+
+        .nav3 a {
+            text-decoration: none;
+            color: #FF4D00;
+        }
+
+        .nav3 a:hover {
+            color: white;
+        }
+
+        #reg {
+            color: white;
+        }
+
+
+        /* ========================= */
+        /* FORM FIELDSET */
+        /* ========================= */
+
+        #field {
+            width: 700px;
+            min-height: 600px;
+            background-color: white;
+            border: 5px solid grey;
+            text-align: center;
+            margin: 5% auto;
+            padding: 5px;
+        }
+
+        #form {
+            color: orangered;
+            font-family: 'Lucida Sans',
+                'Lucida Sans Regular',
+                'Lucida Grande',
+                'Lucida Sans Unicode',
+                Geneva,
+                Verdana,
+                sans-serif;
+
+            font-size: 30px;
+            font-weight: bolder;
+        }
+
+
+        /* ========================= */
+        /* FORM */
+        /* ========================= */
+
+        form {
             width: 500px;
             margin: 20px auto;
         }
+
+        .logo1 {
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .logo1 .logo {
+            height: 60px;
+            width: 60px;
+        }
+
+        .logo1 h1 {
+            color: black;
+            font-size: 25px;
+        }
+
+
+        /* FORM ROW */
 
         .form-row {
             display: flex;
@@ -154,6 +142,8 @@ form {
             width: 130px;
             text-align: right;
             margin-right: 10px;
+            color: black;
+            font-size: 15px;
         }
 
         .form-row input,
@@ -163,117 +153,670 @@ form {
             box-sizing: border-box;
         }
 
-        .gender {
-            width: 20px;
-            display: flex;
+        .form-row input,
+        .form-row select {
+            height: 32px;
         }
+
+
+        /* GENDER */
+
+        .gender {
+            display: flex;
+            align-items: center;
+            width: 260px;
+            color: black;
+        }
+
         .gender input[type="radio"] {
-    width: auto;
-    margin: 0 15px 0 0;
-    margin-left:5px;
-}
+            width: auto;
+            margin: 0 15px 0 5px;
+        }
+
+
+        /* TEXTAREA */
 
         textarea {
             height: 80px;
+            resize: none;
         }
+
+
+        /* INPUT FOCUS */
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            background-color: aquamarine;
+        }
+
+
+        /* ========================= */
+        /* BUTTONS */
+        /* ========================= */
+
+        .but {
+            border: solid 2px black;
+            color: black;
+            width: 100px;
+            height: 35px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .but:hover {
+            background-color: blue;
+            color: white;
+        }
+
+        .but1 {
+            border: solid 2px black;
+            color: black;
+            width: 100px;
+            height: 35px;
+            border-radius: 3px;
+            margin-left: 30px;
+            cursor: pointer;
+        }
+
+        .but1:hover {
+            background-color: blue;
+            color: white;
+        }
+
+
+        /* ========================= */
+        /* BASEFIT */
+        /* ========================= */
+
+        .bas {
+            display: block;
+            color: #FF4D00;
+            font-family: 'Times New Roman',
+                Times,
+                serif;
+
+            font-weight: bold;
+            font-size: 90px;
+            text-align: center;
+            margin-top: 100px;
+            background-color: black;
+        }
+
+
+        /* BOOK BUTTON */
+
+        .bill2 {
+            background-color: white;
+            color: black;
+            font-size: 18px;
+            min-height: 50px;
+            width: 200px;
+            padding: 15px;
+            border-radius: 10px;
+            text-decoration: none;
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        .bill2:hover {
+            background-color: #FF4D00;
+            color: white;
+        }
+
+
+        /* ========================= */
+        /* FOOTER */
+        /* ========================= */
+
+        .vis {
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        .vis ol {
+            padding: 0;
+            margin: 0;
+        }
+
+        .vis li {
+            list-style: none;
+            font-size: 20px;
+        }
+
+        .vis a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+        }
+
+        .vis a:hover {
+            color: blue;
+        }
+
+
+
+        @media screen and (min-width: 601px) and (max-width: 900px) {
+
+            .nav1 {
+                padding: 15px;
+            }
+
+            .logo {
+                width: 65px;
+                height: 65px;
+            }
+
+            .nav3 a {
+                font-size: 19px;
+            }
+
+            #field {
+                width: 90%;
+                margin: 5% auto;
+            }
+
+            form {
+                width: 500px;
+                max-width: 100%;
+            }
+
+        }
+
+
+
+        @media screen and (max-width: 600px) {
+
+            body {
+                width: 100%;
+                overflow-x: hidden;
+            }
+
+
+            /* NAVBAR */
+
+            .nav1 {
+                padding: 10px;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .nav2 {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+            }
+
+            .logo {
+                width: 60px;
+                height: 60px;
+            }
+
+            .nav2 h1 {
+                font-size: 28px;
+            }
+
+            .nav3 {
+                width: 100%;
+                text-align: center;
+                line-height: 2;
+            }
+
+            .nav3 a {
+                font-size: 20px;
+            }
+
+
+            /* FIELDSET */
+
+            #field {
+                width: 95%;
+                min-height: auto;
+                margin: 30px auto;
+                padding: 5px;
+            }
+
+            #form {
+                font-size: 25px;
+            }
+
+
+            /* FORM */
+
+            form {
+                width: 100%;
+                margin: 15px auto;
+                padding: 5px;
+            }
+
+
+            /* LOGO INSIDE FORM */
+
+            .logo1 {
+                width: 100%;
+                height: auto;
+                margin-bottom: 20px;
+            }
+
+            .logo1 .logo {
+                width: 55px;
+                height: 55px;
+            }
+
+            .logo1 h1 {
+                font-size: 22px;
+            }
+
+
+            /* FORM ROW */
+
+            .form-row {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                margin-bottom: 15px;
+            }
+
+            .form-row label {
+                width: 105px;
+                min-width: 105px;
+                text-align: right;
+                margin-right: 8px;
+                font-size: 13px;
+            }
+
+            .form-row input,
+            .form-row select,
+            .form-row textarea {
+                width: calc(100% - 113px);
+                min-width: 0;
+            }
+
+            .form-row input,
+            .form-row select {
+                height: 32px;
+            }
+
+
+            /* GENDER */
+
+            .gender {
+                width: calc(100% - 113px);
+                display: flex;
+                align-items: center;
+                font-size: 13px;
+                white-space: nowrap;
+            }
+
+            .gender input[type="radio"] {
+                width: auto;
+                margin-left: 5px;
+                margin-right: 10px;
+            }
+
+
+            /* TEXTAREA */
+
+            textarea {
+                height: 70px;
+            }
+
+
+            /* BUTTONS */
+
+            .but,
+            .but1 {
+                width: 90px;
+                height: 35px;
+            }
+
+            .but1 {
+                margin-left: 15px;
+            }
+
+
+            /* BASEFIT */
+
+            .bas {
+                font-size: 50px;
+                margin-top: 50px;
+                text-align: center;
+            }
+
+
+            /* BOOK BUTTON */
+
+            .bill2 {
+                width: 200px;
+                font-size: 16px;
+                padding: 15px;
+                margin: 20px auto;
+            }
+
+
+            /* FOOTER */
+
+            .vis {
+                width: 100%;
+                padding: 10px 5px;
+                margin-top: 20px;
+            }
+
+            .vis li {
+                font-size: 13px;
+                line-height: 2;
+            }
+
+            .vis a {
+                font-size: 13px;
+            }
+
+        }
+
     </style>
 </head>
-<body style="background-color:black;">
-      <nav class="nav1">
-      <div class="nav2">
-        <img src="./logg.jpg" alt="Logo" class="logo"> 
-         <h1>FitZone</h1>
-      </div class="box">
-      <div class="nav3">
-        <a href="index.html" target="_self"> Home |</a><a href="./about.html"> About |</a>
-        <a href="plan.html">Plans |</a><a href="./class.html"> Classes |</a>
-        <a href="reg.html" id="reg"> Registration </a>
-      </div>
-    </nav>
-    <div class="form">
-    <fieldset id="field">
-      <legend id="form">FitZone</legend>
-          <form>
-            <div class="logo1">
-             <img src="./logg.jpg" alt="Logo" class="logo"> 
-              <h1>FitZone</h1>
-             </div>
-            
-       <div class="form-row">
-        <label>Name :</label>
-        <input type="text" placeholder="Enter name">
-    </div>
 
-    <div class="form-row">
-        <label>Email :</label>
-        <input type="email" placeholder="Enter email">
-    </div>
 
-    <div class="form-row">
-        <label>Gender :</label>
-        <div class="gender">
-            Male <input type="radio" name="gender">
-            Female <input type="radio" name="gender">
+<body>
+
+
+    <!-- NAVBAR -->
+
+    <nav class="nav1">
+
+        <div class="nav2">
+
+            <img src="./logg.jpg" alt="Logo" class="logo">
+
+            <h1>FitZone</h1>
+
         </div>
-    </div>
-
-    <div class="form-row">
-        <label>Ph Number :</label>
-        <input type="text" placeholder="Enter number">
-    </div>
-
-    <div class="form-row">
-        <label>Age :</label>
-        <input type="number" placeholder="Enter age">
-    </div>
-
-    <div class="form-row">
-        <label>Membership :</label>
-        <select>
-            <option>1 month</option>
-            <option>3 months</option>
-            <option>6 months</option>
-            <option>1 year</option>
-        </select>
-    </div>
-
-    <div class="form-row">
-        <label>Starting date :</label>
-        <input type="date">
-    </div>
-
-    <div class="form-row">
-        <label>Ending date :</label>
-        <input type="date">
-    </div>
-
-    <div class="form-row">
-        <label>Address :</label>
-        <textarea></textarea>
-    </div>
-      <br> 
-        <button class="but">Submit</button>     <button class="but1"> Clear</button>
 
 
-  
-      </form>
-    </fieldset>
+        <div class="nav3">
+
+            <a href="index.html" target="_self">
+                Home |
+            </a>
+
+            <a href="./about.html">
+                About |
+            </a>
+
+            <a href="plan.html">
+                Plans |
+            </a>
+
+            <a href="./class.html">
+                Classes |
+            </a>
+
+            <a href="reg.html" id="reg">
+                Registration
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- REGISTRATION FORM -->
+
+    <div class="form">
+
+        <fieldset id="field">
+
+            <legend id="form">
+                FitZone
+            </legend>
+
+
+            <form>
+
+
+                <div class="logo1">
+
+                    <img src="./logg.jpg"
+                        alt="Logo"
+                        class="logo">
+
+                    <h1>
+                        FitZone
+                    </h1>
+
+                </div>
+
+
+                <!-- NAME -->
+
+                <div class="form-row">
+
+                    <label>
+                        Name :
+                    </label>
+
+                    <input type="text"
+                        placeholder="Enter name">
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div class="form-row">
+
+                    <label>
+                        Email :
+                    </label>
+
+                    <input type="email"
+                        placeholder="Enter email">
+
+                </div>
+
+
+                <!-- GENDER -->
+
+                <div class="form-row">
+
+                    <label>
+                        Gender :
+                    </label>
+
+                    <div class="gender">
+
+                        Male
+                        <input type="radio"
+                            name="gender">
+
+                        Female
+                        <input type="radio"
+                            name="gender">
+
+                    </div>
+
+                </div>
+
+
+                <!-- PHONE -->
+
+                <div class="form-row">
+
+                    <label>
+                        Ph Number :
+                    </label>
+
+                    <input type="text"
+                        placeholder="Enter number">
+
+                </div>
+
+
+                <!-- AGE -->
+
+                <div class="form-row">
+
+                    <label>
+                        Age :
+                    </label>
+
+                    <input type="number"
+                        placeholder="Enter age">
+
+                </div>
+
+
+                <!-- MEMBERSHIP -->
+
+                <div class="form-row">
+
+                    <label>
+                        Membership :
+                    </label>
+
+                    <select>
+
+                        <option>
+                            1 month
+                        </option>
+
+                        <option>
+                            3 months
+                        </option>
+
+                        <option>
+                            6 months
+                        </option>
+
+                        <option>
+                            1 year
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- START DATE -->
+
+                <div class="form-row">
+
+                    <label>
+                        Starting date :
+                    </label>
+
+                    <input type="date">
+
+                </div>
+
+
+                <!-- END DATE -->
+
+                <div class="form-row">
+
+                    <label>
+                        Ending date :
+                    </label>
+
+                    <input type="date">
+
+                </div>
+
+
+                <!-- ADDRESS -->
+
+                <div class="form-row">
+
+                    <label>
+                        Address :
+                    </label>
+
+                    <textarea></textarea>
+
+                </div>
+
+
+                <br>
+
+
+                <!-- BUTTONS -->
+
+                <button class="but"
+                    type="submit">
+                    Submit
+                </button>
+
+                <button class="but1"
+                    type="reset">
+                    Clear
+                </button>
+
+
+            </form>
+
+        </fieldset>
+
     </div>
+
+
+    <!-- BASEFIT -->
+
     <div>
-      <b class="bas">BASEFIT</b> <br>
-       <a href="./reg.html" class="bill2">Book a Trial classes Now</a>
-     </div> 
-     <div class="vis">
-        <ol>
-            <li>
-               <a href=""> Privacy Policy </a> |
-                <a href="">  Refund Policy  </a>  |
-               <a href=""> Terms and Condition  </a> |
-                @basefit1232gmail.com 
-            </li>
-        </ol>
-    
+
+        <b class="bas">
+            BASEFIT
+        </b>
+
+        <br>
+
+        <a href="./reg.html"
+            class="bill2">
+
+            Book a Trial classes Now
+
+        </a>
+
     </div>
-    
+
+
+    <!-- FOOTER -->
+
+    <div class="vis">
+
+        <ol>
+
+            <li>
+
+                <a href="">
+                    Privacy Policy
+                </a>
+
+                |
+
+                <a href="">
+                    Refund Policy
+                </a>
+
+                |
+
+                <a href="">
+                    Terms and Condition
+                </a>
+
+                |
+
+                @basefit1232gmail.com
+
+            </li>
+
+        </ol>
+
+    </div>
+
+
 </body>
+
 </html>

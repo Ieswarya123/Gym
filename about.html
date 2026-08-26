@@ -1,199 +1,553 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
+
     <style>
-          .nav1{
+
+        .nav1 {
             color: white;
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 20px;
-            position:sticky;
-            top:0;
-            background-color: #000000; 
-             z-index: 99999;
-             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-            
+            position: sticky;
+            top: 0;
+            background-color: #000000;
+            z-index: 99999;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         }
-       
-        .nav2{
-            display:flex;
-            gap:10%;
-            
-        }
-       .logo{
-           height:80px;
-           width:80px;
-           border-radius: 50px;
-       }
-       .nav3{
-         font-size: 20px;
-         font-weight: 100px;
-         
-       }
-       .nav3 a:hover{
-        color:white;
 
-       }
-       .nav3 a{
-        text-decoration: none;
-        color: #FF4D00;
-       }
-       .gif{
-        height:500px;
-        width:1340px;
-       }
-       .box{
-        border:14px solid grey;
-        height:500px;
-        width:1310px;
-       }
-       .box2{
-        border:14px solid black;
-        height:500px;
-        width:1310px;
-       }
-    
-       .img1{
-        height:500px;
-        width:50%;
- }
- .img2{
-    height:500px;
-    
- }
-    .one{
-        display: flex;
-    }
-    .two{
-        display:flex;
-    }
-    .heading{
-        font-size: 40px;
-    }
-    .heading2{
-        color:white;
-        text-align: justify;
-        font-size: 50px;
-    }
-       .par{
-        background-color:black;
-        color:white;
-        font-size:19px;
-        height:300px;
-        padding:70px;
-        margin-top:50px;
-       }
-       b{
-        text-align:center;
-       }
-       .bas {
-        color:#FF4D00;
-        font-family: 'Times New Roman', Times, serif;
-        font-weight: bold;
-        font-size: 90px;
-        margin-top: 100px;
-        background-color: black;
-        margin-left: auto;
-        margin-right: auto;
+        .nav2 {
+            display: flex;
+            gap: 10%;
         }
-       .bill2{
-        background-color:white;
-        color:black;
-        font-size: 18px;
-        height:20px;
-        width:190px;
-        padding:20px;
-        border-radius:10px;
-        text-decoration: none;
-        display:block;
-        margin-top: 20px;
-        margin-left:20px;
-       }
-       .vis{
-         color:white;
-       }
-       li,a{
-        list-style: none;
-        text-align: center;
-        font-size: 20px;
-        text-decoration: none;
-        color:white;
-       }
-       .vis a:hover{
-        color:blue;
-       }
-       .bill2:hover{
-        background-color:#FF4D00;
-       }
-       #about{
-        color:white;
-       }
+
+        .logo {
+            height: 80px;
+            width: 80px;
+            border-radius: 50px;
+        }
+
+        .nav3 {
+            font-size: 20px;
+            font-weight: 100px;
+        }
+
+        .nav3 a:hover {
+            color: white;
+        }
+
+        .nav3 a {
+            text-decoration: none;
+            color: #FF4D00;
+        }
+
+        .gif {
+            height: 500px;
+            width: 1340px;
+        }
+
+        .box {
+            border: 14px solid grey;
+            height: 500px;
+            width: 1310px;
+        }
+
+        .box2 {
+            border: 14px solid black;
+            height: 500px;
+            width: 1310px;
+        }
+
+        .img1 {
+            height: 500px;
+            width: 50%;
+        }
+
+        .img2 {
+            height: 500px;
+        }
+
+        .one {
+            display: flex;
+        }
+
+        .two {
+            display: flex;
+        }
+
+        .heading {
+            font-size: 40px;
+        }
+
+        .heading2 {
+            color: white;
+            text-align: justify;
+            font-size: 50px;
+        }
+
+        .par {
+            background-color: black;
+            color: white;
+            font-size: 19px;
+            height: 300px;
+            padding: 70px;
+            margin-top: 50px;
+        }
+
+        b {
+            text-align: center;
+        }
+
+        .bas {
+            color: #FF4D00;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+            font-size: 90px;
+            margin-top: 100px;
+            background-color: black;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .bill2 {
+            background-color: white;
+            color: black;
+            font-size: 18px;
+            height: 20px;
+            width: 190px;
+            padding: 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            display: block;
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+
+        .vis {
+            color: white;
+        }
+
+        li,
+        a {
+            list-style: none;
+            text-align: center;
+            font-size: 20px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .vis a:hover {
+            color: blue;
+        }
+
+        .bill2:hover {
+            background-color: #FF4D00;
+        }
+
+        #about {
+            color: white;
+        }
+
+
+        /* ========================= */
+        /* MOBILE MEDIA QUERY */
+        /* ========================= */
+
+        @media screen and (max-width: 600px) {
+
+            body {
+                margin: 0;
+                padding: 0;
+                overflow-x: hidden;
+            }
+
+            /* NAVBAR */
+
+            .nav1 {
+                padding: 10px;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .nav2 {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+            }
+
+            .logo {
+                width: 60px;
+                height: 60px;
+            }
+
+            .nav2 h1 {
+                font-size: 30px;
+            }
+
+            .nav3 {
+                width: 100%;
+                text-align: center;
+                line-height: 2;
+            }
+
+            .nav3 a {
+                font-size: 16px;
+            }
+
+
+            /* TOP GIF */
+
+            .gif {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+
+
+            /* FIRST BOX */
+
+            .box {
+                width: 100%;
+                height: auto;
+                border: 5px solid grey;
+            }
+
+            .one {
+                display: flex;
+                flex-direction: column;
+            }
+
+
+            /* FIRST IMAGE */
+
+            .img1 {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+
+
+            /* FIRST PARAGRAPH */
+
+            .one .par {
+                width: 100%;
+                height: auto;
+                padding: 25px;
+                margin: 0;
+                font-size: 16px;
+                line-height: 1.5;
+            }
+
+            .heading {
+                font-size: 30px;
+                display: block;
+                text-align: center;
+                margin-bottom: 15px;
+            }
+
+
+            /* SECOND BOX */
+
+            .box2 {
+                width: 100%;
+                height: auto;
+                border: 5px solid black;
+            }
+
+            .two {
+                display: flex;
+                flex-direction: column;
+            }
+
+
+            /* TRAINER IMAGE */
+
+            .img2 {
+                width: 100%;
+                height: auto;
+                display: block;
+                object-fit: contain;
+                order: -1;
+            }
+
+
+            /* SECOND PARAGRAPH */
+
+            .two .par {
+                width: 100%;
+                height: auto;
+                padding: 25px;
+                margin: 0;
+                font-size: 16px;
+                line-height: 1.5;
+            }
+
+            .heading2 {
+                font-size: 30px;
+                display: block;
+                text-align: center;
+                margin-bottom: 15px;
+            }
+
+
+            /* BASEFIT */
+
+            .bas {
+                display: block;
+                font-size: 50px;
+                text-align: center;
+                margin-top: 50px;
+            }
+
+
+            /* BUTTON */
+
+            .bill2 {
+                width: 200px;
+                height: auto;
+                padding: 15px;
+                margin: 20px auto;
+                text-align: center;
+            }
+
+
+            /* FOOTER */
+
+            .vis {
+                text-align: center;
+                padding: 10px;
+            }
+
+            .vis ol {
+                padding: 0;
+            }
+
+            .vis li {
+                font-size: 14px;
+                line-height: 2;
+            }
+
+            .vis a {
+                font-size: 14px;
+            }
+
+        }
+
     </style>
 </head>
+
+
 <body style="background-color: black;">
+
+
+    <!-- NAVBAR -->
+
     <nav class="nav1">
-      <div class="nav2">
-        <img src="./logg.jpg" alt="Logo" class="logo"> 
-         <h1>FitZone</h1>
-      </div>
-      <div class="nav3">
-        <a href="index.html" target="_self"> Home |</a><a href="./about.html"id='about'> About |</a>
-        <a href="plan.html">Plans |</a><a href="./class.html"> Classes |</a>
-        <a href="reg.html"> Registration</a>
-      </div>
-   </nav>
-    <img src="./giphy.jpg" alt="video"class="gif">
-    <div class="box">
-        <div class="one">
-            <img src="./abgym.jpg" class="img1">
-            <p class="par">
-<b class="heading">About
-Base Fit
-Studio </b><br>
-This is a space to share more about your business. Explain who's behind it, what it does and what this site has to offer. 
-It’s an opportunity to tell the story behind the business or describe a special service or product it offers. You can use
-this section to share your company's history or highlight a particular feature that sets it apart from competitors.
-Let the writing speak for itself. Keep a consistent tone and voice throughout the website to stay true to the brand image 
-and give visitors a taste of the company’s values and personality.</p>
+
+        <div class="nav2">
+
+            <img src="./logg.jpg" alt="Logo" class="logo">
+
+            <h1>FitZone</h1>
+
         </div>
-    </div>
-    <div class="box2">
-        <div class="two">
+
+
+        <div class="nav3">
+
+            <a href="index.html" target="_self">
+                Home |
+            </a>
+
+            <a href="./about.html" id="about">
+                About |
+            </a>
+
+            <a href="plan.html">
+                Plans |
+            </a>
+
+            <a href="./class.html">
+                Classes |
+            </a>
+
+            <a href="reg.html">
+                Registration
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- TOP IMAGE -->
+
+    <img src="./giphy.jpg" alt="video" class="gif">
+
+
+    <!-- FIRST SECTION -->
+
+    <div class="box">
+
+        <div class="one">
+
+            <img src="./abgym.jpg" class="img1">
+
+
             <p class="par">
-          <b class="heading2"> About Max Randy 
-Certified Fitness Trainer and Founder  : </b>
 
-This is a space to share more about your business. Take advantage of this long text to tell people who's behind it, what it does, how it began and other details. It's an excellent place to share the story behind your business and describe what this site has to offer its visitors.
+                <b class="heading">
+                    About
+                    Base Fit
+                    Studio
+                </b>
 
- 
+                <br>
 
-You can write about your business's history here, from its founding until now. Draw readers in with an engaging narrative. By telling its story, you can help people connect to the business. Share what inspired you to create it and what need it was meant to fill. You can include details of the obstacles it overcame to get where it is today. 
+                This is a space to share more about your business.
+                Explain who's behind it, what it does and what this
+                site has to offer.
 
- 
+                It’s an opportunity to tell the story behind the
+                business or describe a special service or product
+                it offers.
 
-This space is also a good spot to talk about a particular feature of your business that sets it apart from its competitors. Explain to readers what makes this business unique and why they should choose it over other options. Focus on the value your business can offer its users.</p>
-<img src="./abtrainer.jpg" class="img2">       
-</div>
-</div>
- <div>
-      <b class="bas">BASEFIT</b> <br>
-       <a href="./reg.html" class="bill2">Book a Trial classes Now</a>
-     </div> 
-     <div class="vis">
-        <ol>
-            <li>
-               <a href=""> Privacy Policy </a> |
-                <a href="">  Refund Policy  </a>  |
-               <a href=""> Terms and Condition  </a> |
-                @basefit1232gmail.com 
-            </li>
-        </ol>
-    
+                You can use this section to share your company's
+                history or highlight a particular feature that
+                sets it apart from competitors.
+
+                Let the writing speak for itself.
+
+                Keep a consistent tone and voice throughout the
+                website to stay true to the brand image and give
+                visitors a taste of the company’s values and
+                personality.
+
+            </p>
+
+        </div>
+
     </div>
-    
+
+
+    <!-- SECOND SECTION -->
+
+    <div class="box2">
+
+        <div class="two">
+
+
+            <p class="par">
+
+                <b class="heading2">
+
+                    About Max Randy
+                    Certified Fitness Trainer and Founder:
+
+                </b>
+
+
+                This is a space to share more about your business.
+                Take advantage of this long text to tell people
+                who's behind it, what it does, how it began and
+                other details.
+
+                It's an excellent place to share the story behind
+                your business and describe what this site has to
+                offer its visitors.
+
+
+                You can write about your business's history here,
+                from its founding until now.
+
+                Draw readers in with an engaging narrative.
+
+                By telling its story, you can help people connect
+                to the business.
+
+                Share what inspired you to create it and what need
+                it was meant to fill.
+
+                You can include details of the obstacles it
+                overcame to get where it is today.
+
+
+                This space is also a good spot to talk about a
+                particular feature of your business that sets it
+                apart from its competitors.
+
+                Explain to readers what makes this business unique
+                and why they should choose it over other options.
+
+                Focus on the value your business can offer its users.
+
+            </p>
+
+
+            <img src="./abtrainer.jpg" class="img2">
+
+        </div>
+
+    </div>
+
+
+    <!-- BASEFIT -->
+
+    <div>
+
+        <b class="bas">
+            BASEFIT
+        </b>
+
+        <br>
+
+        <a href="./reg.html" class="bill2">
+            Book a Trial classes Now
+        </a>
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <div class="vis">
+
+        <ol>
+
+            <li>
+
+                <a href="">
+                    Privacy Policy
+                </a>
+
+                |
+
+                <a href="">
+                    Refund Policy
+                </a>
+
+                |
+
+                <a href="">
+                    Terms and Condition
+                </a>
+
+                |
+
+                @basefit1232gmail.com
+
+            </li>
+
+        </ol>
+
+    </div>
+
+
 </body>
+
 </html>
