@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+       <style>
+        body{
+            background-color: #000000;
+         }
+       
+         
+        .nav1{
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            position:sticky;
+            top:0;
+            background-color: #000000; 
+             z-index: 99999;
+             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            
+        }
+       
+        .nav2{
+            display:flex;
+            gap:10%;
+            
+        }
+       .logo{
+           height:80px;
+           width:80px;
+           border-radius: 50px;
+       }
+       .nav3{
+         font-size: 20px;
+         font-weight: 100px;
+         
+       }
+       .nav3 a:hover{
+        color:white;
+
+       }
+       .nav3 a{
+        text-decoration: none;
+        color: #FF4D00;
+
+       }
+       .pri{
+        color:white;
+        margin-left:70px;
+        font-size:60px;
+        text-align: center;
+        font-weight: bolder;
+       }
+        .pri2{
+            color:white;
+            margin-left:35px;
+            font-size:40px;
+            font-weight:bold;
+           }
+        .para{
+            color:white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size:19px;
+        }
+        .box{
+            height:180px;
+            width:900px;
+            margin:10px;
+ }
+ .para{
+    margin-left:20px;
+
+ }
+        .box1{
+            height:90px;
+            width: 900px;
+            margin:30px;
+            margin-top:250px;
+        }
+        .pri3{
+            margin-left:20px;
+            font-size:40px;
+            font-weight: bolder;
+            color:white;
+            margin-top:10px;
+        }
+        .pri4{
+            color:white;
+            font-weight: lighter;
+            font-size:19px ;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .pri2,
+        .pri3{
+            color:#C3110C;
+        }
+        .box2{
+            margin-top:250px;
+            color:#C3110C;
+            margin-left:35px;
+            width:900px;
+            height:100px;
+        }
+     .pri6{
+            font-size:40px;
+            font-weight: bolder;
+            margin-left:20px;
+        }
+        .pri5{
+            color:white;
+            font-size:19px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+        }
+    .bas {
+        color:#FF4D00;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
+        font-size: 90px;
+        margin-top: 100px;
+        background-color: black;
+        margin-left: auto;
+        margin-right: auto;
+        }
+        .foot{
+            margin-top: 200px;
+        }
+       .bill2{
+        background-color:white;
+        color:black;
+        font-size: 18px;
+        height:20px;
+        width:190px;
+        padding:20px;
+        border-radius:10px;
+        text-decoration: none;
+        display:block;
+        margin-top: 20px;
+        margin-left:20px;
+       }
+       .vis{
+         color:white;
+       }
+       li,a{
+        list-style: none;
+        text-align: center;
+        font-size: 20px;
+        text-decoration: none;
+        color:white;
+       }
+       .vis a:hover{
+        color:blue;
+       }
+       .bill2:hover{
+        background-color:#FF4D00;
+       }
+       /* Tablet and Mobile */
+@media screen and (max-width: 768px) {
+
+    .nav1 {
+        flex-direction: column;
+        padding: 10px;
+        gap: 15px;
+    }
+
+    .nav2 {
+        align-items: center;
+        gap: 10px;
+    }
+
+    .logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .nav2 h1 {
+        font-size: 25px;
+    }
+
+    .nav3 {
+        text-align: center;
+        font-size: 15px;
+        line-height: 30px;
+    }
+
+    .nav3 a {
+        font-size: 15px;
+    }
+
+    /* Main heading */
+    .pri {
+        font-size: 38px;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .pri2 {
+        font-size: 28px;
+        margin-left: 0;
+    }
+
+    /* First content */
+    .box {
+        width: 90%;
+        height: auto;
+        margin: 20px auto;
+    }
+
+    .para {
+        margin-left: 0;
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    /* Second content */
+    .box1 {
+        width: 90%;
+        height: auto;
+        margin: 100px auto 20px;
+    }
+
+    .pri3 {
+        font-size: 28px;
+        margin-left: 0;
+    }
+
+    .pri4 {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    /* Third content */
+    .box2 {
+        width: 90%;
+        height: auto;
+        margin: 100px auto 20px;
+    }
+
+    .pri6 {
+        font-size: 28px;
+        margin-left: 0;
+    }
+
+    .pri5 {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    /* Footer */
+    .bas {
+        display: block;
+        text-align: center;
+        font-size: 50px;
+        margin-top: 50px;
+    }
+
+    .bill2 {
+        width: 180px;
+        margin: 20px auto;
+        text-align: center;
+    }
+
+    .vis {
+        text-align: center;
+    }
+
+    .vis a {
+        font-size: 14px;
+    }
+}
+
+
+/* Small Mobile */
+@media screen and (max-width: 480px) {
+
+    .logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .nav2 h1 {
+        font-size: 22px;
+    }
+
+    .nav3 a {
+        font-size: 12px;
+    }
+
+    .pri {
+        font-size: 30px;
+    }
+
+    .pri2,
+    .pri3,
+    .pri6 {
+        font-size: 23px;
+    }
+
+    .para,
+    .pri4,
+    .pri5 {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .bas {
+        font-size: 40px;
+    }
+
+    .bill2 {
+        font-size: 16px;
+        width: 170px;
+    }
+
+    .vis a {
+        font-size: 12px;
+    }
+}
+       </style>
+</head>
+<body>
+ <nav class="nav1">
+      <div class="nav2">
+        <img src="./logg.jpg" alt="Logo" class="logo"> 
+         <h1>FitZone</h1>
+      </div>
+      <div class="nav3">
+        <a href="index.html" target="_self" id="home"> Home |</a><a href="./about.html"> About |</a>
+        <a href="./plan.html">Plans |</a><a href="./class.html"> Classes |</a>
+        <a href="reg.html"> Registration </a>
+      </div>
+    </nav>
+      <div class="box">
+        <h1 class="pri"> Terms and conditions</h1>
+       <h2 class="pri2">A Legal Disclaimer</h2>
+        <p class="para"> The explanations and information provided on this page are only general and high-level explanations and information on how to write your own document of Terms & Conditions.
+            <br> <br> You should not rely on this article as legal advice or as recommendations regarding what you should actually do, because we cannot know in advance what are the specific terms you wish 
+             to establish between your business and your customers and visitors.<br> <br> We recommend that you seek legal advice to help you understand and to assist you in the creation of your own Terms & Conditions.
+        </p>
+        </div> 
+    <div class="box1">
+        <h2 class="pri3">Terms and conditions - the basics</h2>
+ <p class="pri4"> Having said that, Terms and Conditions (“T&C”) are a set of legally binding terms defined by you, as the owner of this website. The T&C set forth the legal boundaries governing 
+    the activities of the website visitors, or your customers, while they visit or engage with this website. The T&C are meant to establish the legal relationship between the site visitors and you as the website owner. 
+<br> <br>
+T&C should be defined according to the specific needs and nature of each website. For example, a website offering products to customers in e-commerce transactions requires T&C that are different 
+from the T&C of a website only providing information (like a blog, a landing page, and so on).     
+<br> <br>
+T&C provide you as the website owner the ability to protect yourself from potential legal exposure, but this may differ from jurisdiction to jurisdiction, 
+so make sure to receive local legal advice if you are trying to protect yourself from legal exposure.
+
+  </p>
+   </div> <br>
+   <div class="box2">
+     <h2 class="pri6">What to include in the T&C document :
+</h2>
+<p class="pri5">
+    Generally speaking, T&C often address these types of issues: Who is allowed to use the website; the possible payment methods.
+    <br> <br> A declaration that the website owner may change his or her offering in the future;
+     the types of warranties the website owner gives his or her customers; a reference to issues of intellectual property or copyrights, where relevant; the website owner’s right to suspend or cancel a member’s account; and much, much more. 
+</p>
+   </div>
+  <br>
+   <div class="foot">
+      <b class="bas">BASEFIT</b> <br>
+       <a href="./reg.html" class="bill2">Book a Trial classes Now</a>
+     </div> 
+     <div class="vis">
+        <ol>
+            <li>
+               <a href="./privacy.html"> Privacy Policy </a> |
+                <a href="./refund.html">  Refund Policy  </a>  |
+               <a href="./term.html"> Terms and Condition  </a> |
+                @basefit1232gmail.com 
+            </li>
+        </ol>
+    
+    </div>
+
+
+
+
+</body>
+</html>

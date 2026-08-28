@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+                body{
+            background-color: #000000;
+         }
+       
+         
+        .nav1{
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            position:sticky;
+            top:0;
+            background-color: #000000; 
+             z-index: 99999;
+             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            
+        }
+       
+        .nav2{
+            display:flex;
+            gap:10%;
+            
+        }
+       .logo{
+           height:80px;
+           width:80px;
+           border-radius: 50px;
+       }
+       .nav3{
+         font-size: 20px;
+         font-weight: 100px;
+         
+       }
+       .nav3 a:hover{
+        color:white;
+
+       }
+       .nav3 a{
+        text-decoration: none;
+        color: #FF4D00;
+
+       }
+       .pri{
+        color:white;
+        margin-left:70px;
+        font-size:60px;
+        text-align: center;
+        font-weight: bolder;
+       }
+        .pri2{
+            color:white;
+            margin-left:35px;
+            font-size:40px;
+            font-weight:bold;
+           }
+        .para{
+            color:white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size:19px;
+        }
+        .box{
+            height:180px;
+            width:900px;
+            margin:10px;
+ }
+ .para{
+    margin-left:20px;
+
+ }
+        .box1{
+            height:90px;
+            width: 900px;
+            margin:30px;
+            margin-top:250px;
+        }
+        .pri3{
+            margin-left:20px;
+            font-size:40px;
+            font-weight: bolder;
+            color:white;
+            margin-top:10px;
+        }
+        .pri4{
+            color:white;
+            font-weight: lighter;
+            font-size:19px ;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .pri2,
+        .pri3{
+            color:#C3110C;
+        }
+        .box2{
+            margin-top:250px;
+            color:#C3110C;
+            margin-left:35px;
+            width:900px;
+            height:100px;
+        }
+     .pri6{
+            font-size:40px;
+            font-weight: bolder;
+            margin-left:20px;
+        }
+        .pri5{
+            color:white;
+            font-size:19px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+        }
+    .bas {
+        color:#FF4D00;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
+        font-size: 90px;
+        margin-top: 100px;
+        background-color: black;
+        margin-left: auto;
+        margin-right: auto;
+        }
+        .foot{
+            margin-top: 200px;
+        }
+       .bill2{
+        background-color:white;
+        color:black;
+        font-size: 18px;
+        height:20px;
+        width:190px;
+        padding:20px;
+        border-radius:10px;
+        text-decoration: none;
+        display:block;
+        margin-top: 20px;
+        margin-left:20px;
+       }
+       .vis{
+         color:white;
+       }
+       li,a{
+        list-style: none;
+        text-align: center;
+        font-size: 20px;
+        text-decoration: none;
+        color:white;
+       }
+       .vis a:hover{
+        color:blue;
+       }
+       .bill2:hover{
+        background-color:#FF4D00;
+       }
+       @media screen and (max-width: 768px) {
+
+    /* Navigation */
+    .nav1 {
+        flex-direction: column;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .nav2 {
+        align-items: center;
+        gap: 10px;
+    }
+
+    .logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .nav2 h1 {
+        font-size: 25px;
+    }
+
+    .nav3 {
+        text-align: center;
+        line-height: 28px;
+    }
+
+    .nav3 a {
+        font-size: 14px;
+    }
+
+
+    /* Main heading */
+    .box {
+        width: 90%;
+        height: auto;
+        margin: 20px auto;
+    }
+
+    .pri {
+        font-size: 38px;
+        margin-left: 0;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .pri2 {
+        font-size: 27px;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .para {
+        margin-left: 0;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+
+    /* Second section */
+    .box1 {
+        width: 90%;
+        height: auto;
+        margin: 60px auto 0;
+    }
+
+    .pri3 {
+        font-size: 27px;
+        margin-left: 0;
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+
+    .pri4 {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+
+    /* Third section */
+    .box2 {
+        width: 90%;
+        height: auto;
+        margin: 60px auto 0;
+    }
+
+    .pri6 {
+        font-size: 27px;
+        margin-left: 0;
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+
+    .pri5 {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+
+    /* Footer */
+    .foot {
+        margin-top: 70px;
+        text-align: center;
+    }
+
+    .bas {
+        display: block;
+        font-size: 50px;
+        margin-top: 0;
+    }
+
+    .bill2 {
+        width: 180px;
+        margin: 20px auto;
+        text-align: center;
+    }
+
+    .vis {
+        text-align: center;
+    }
+
+    .vis a {
+        font-size: 13px;
+    }
+}
+
+
+/* Small mobile */
+@media screen and (max-width: 480px) {
+
+    .logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .nav2 h1 {
+        font-size: 22px;
+    }
+
+    .nav3 a {
+        font-size: 12px;
+    }
+
+    .pri {
+        font-size: 30px;
+    }
+
+    .pri2,
+    .pri3,
+    .pri6 {
+        font-size: 23px;
+    }
+
+    .para,
+    .pri4,
+    .pri5 {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .box1,
+    .box2 {
+        margin-top: 40px;
+    }
+
+    .bas {
+        font-size: 40px;
+    }
+
+    .bill2 {
+        width: 170px;
+        font-size: 15px;
+    }
+
+    .vis a {
+        font-size: 11px;
+    }
+}
+    </style>
+</head>
+<body>
+    <nav class="nav1">
+      <div class="nav2">
+        <img src="./logg.jpg" alt="Logo" class="logo"> 
+         <h1>FitZone</h1>
+      </div>
+      <div class="nav3">
+        <a href="index.html" target="_self" id="home"> Home |</a><a href="./about.html"> About |</a>
+        <a href="./plan.html">Plans |</a><a href="./class.html"> Classes |</a>
+        <a href="reg.html"> Registration </a>
+      </div>
+    </nav>
+      <div class="box">
+        <h1 class="pri"> Refund Policy</h1>
+       <h2 class="pri2">A Legal Disclaimer</h2>
+        <p class="para"> 
+           The explanations and information provided on this page are only general and high-level explanations and information on how to write your own document of a Refund Policy. <br>
+           <br>
+           You should not rely on this article as legal advice or as recommendations regarding what you should actually do, because we cannot know in advance what are the specific refund policies that you wish to establish
+            between your business and your customers. 
+            <br> <br>We recommend that you seek legal advice to help you understand and to assist you in the creation of your own Refund Policy.
+        </p>
+        </div> 
+    <div class="box1">
+        <h2 class="pri3">Refund Policy - the basics</h2>
+ <p class="pri4">  
+Having said that, a Refund Policy is a legally binding document that is meant to establish the legal relations between you and your customers regarding how and if you will provide them with a refund.  <br> <br>
+Online businesses selling products are sometimes required (depending on local laws and regulations) to present their product return policy and refund policy. In some jurisdictions, this is needed in order to comply with consumer protection laws. 
+<br> <br>It may also help you avoid legal claims from customers that are not satisfied with the products they purchased.
+  </p>
+   </div> 
+   <div class="box2">
+     <h2 class="pri6">What to include in the T&C document :
+</h2>
+<p class="pri5">
+    Generally speaking, a Refund Policy often addresses these types of issues: the timeframe for asking for a refund; 
+    will the refund be full or partial;
+     under which conditions will the customer receive a refund; and much, much more.
+    </p>
+   </div>
+  <br>
+   <div class="foot">
+      <b class="bas">BASEFIT</b> <br>
+       <a href="./reg.html" class="bill2">Book a Trial classes Now</a>
+     </div> 
+     <div class="vis">
+        <ol>
+            <li>
+               <a href="./privacy.html"> Privacy Policy </a> |
+                <a href="./refund.html">  Refund Policy  </a>  |
+               <a href="./term.html"> Terms and Condition  </a> |
+                @basefit1232gmail.com 
+            </li>
+        </ol>
+    
+    </div>
+
+
+
+    
+</body>
+</html>
