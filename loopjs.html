@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // sum of n nmbers
+    
+     let n=6;
+     let sum=0;
+     for (let i=1;i<=n;i++)
+     {
+        sum=sum+i;
+     }
+     document.write("sum of first " + n + "  numbers is:" + sum);
+document.write("<br>")
+    //  table
+     function tab(num)
+     {
+    for(let i=0;i<=10;i++)
+{
+    document.write(i + "x" + num + "=" +(i*num)+ "<br>");
+}
+     }
+tab(6);
+
+// right angle stars
+function star(){
+
+
+for(let i=1;i<=10;i++)
+{
+    for(let j=1;j<i;j++)
+{
+    document.write(" * ");
+}
+document.write("<br>");
+}
+}
+star();
+// even numbers
+function even(a){
+
+for(let i=1;i<=a;i++)
+{
+    if(i%2== 0)
+{
+    document.write("Even Numbers:"+ i +"<br>")
+}
+
+}
+}
+even(36);
+document.write("<hr>");
+
+// fibonacci series
+
+function series(series,d,e){
+
+for (let i=1;i<=series;i++)
+{
+        document.write("Fibonacci Series :" +d+"<br>");
+
+    let c=d+e;
+    d=e;
+    e=c;
+}
+}
+series(8,0,1);
+document.write("<hr>");
+
+// factorial
+let j=5;
+let fact=1;
+for(let i=1;i<=j;i++)
+
+{
+    fact=fact * i;
+}
+    document.write(fact);
+
+    document.write("<hr>");
+  
+function numb(nu,i){
+
+while(i<nu)
+{
+    document.write("<br>Number is:"+ i);
+        i++;
+
+}
+}
+numb(5,1)
+
+document.write("<hr>");
+document.write("<br>");
+// odd number
+
+function odd(odd,k){
+while(k<=odd)
+{
+    if(k%2!=0)
+    {
+        document.write("Odd Number: "+k +"<br>");
+    }
+    k++;
+}
+}
+odd(20,1);
+document.write("<hr>")
+        function summ(g,h,summ){
+        while(h<=g)
+    {
+        summ=summ+h;
+        h++;
+    }
+    document.write("Sum of digits :"+summ);
+}
+summ(20,1,0);
+
+    document.write("<hr>");
+  let number=3657;
+  let rev=0;
+  while(number>0)
+  {
+    let rem=number%10;
+    rev=rev*10+rem;
+    number=Math.floor(number/10);
+  }
+  document.write(rev);
+    </script>
+</body>
+<form>
+    <input type="button" value="Click me" onmouseup="sayhello()"></input>
+    <script>
+    function sayhello(){
+        alert("Gud Morning");
+    }
+
+    </script>
+</form>
+</html>

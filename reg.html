@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Registration</title>
-
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Registration  </title>
     <style>
 
         * {
@@ -19,9 +18,6 @@
             background-color: black;
             overflow-x: hidden;
         }
-
-
-
         .nav1 {
             color: white;
             display: flex;
@@ -67,10 +63,6 @@
         #reg {
             color: white;
         }
-
-
-     
-
         #field {
             width: 700px;
             min-height: 600px;
@@ -117,10 +109,6 @@
             color: black;
             font-size: 25px;
         }
-
-
-     
-
         .form-row {
             display: flex;
             align-items: center;
@@ -204,15 +192,6 @@
             background-color: blue;
             color: white;
         }
-
-
-     
-
-      
-
-
-
-
         @media screen and (min-width: 601px) and (max-width: 900px) {
 
             .nav1 {
@@ -239,19 +218,12 @@
             }
 
         }
-
-
-
         @media screen and (max-width: 600px) {
 
             body {
                 width: 100%;
                 overflow-x: hidden;
             }
-
-
-            /* NAVBAR */
-
             .nav1 {
                 padding: 10px;
                 flex-direction: column;
@@ -282,10 +254,6 @@
             .nav3 a {
                 font-size: 20px;
             }
-
-
-            /* FIELDSET */
-
             #field {
                 width: 95%;
                 min-height: auto;
@@ -296,19 +264,11 @@
             #form {
                 font-size: 25px;
             }
-
-
-            /* FORM */
-
             form {
                 width: 100%;
                 margin: 15px auto;
                 padding: 5px;
             }
-
-
-            /* LOGO INSIDE FORM */
-
             .logo1 {
                 width: 100%;
                 height: auto;
@@ -323,10 +283,6 @@
             .logo1 h1 {
                 font-size: 22px;
             }
-
-
-            /* FORM ROW */
-
             .form-row {
                 display: flex;
                 align-items: center;
@@ -341,22 +297,16 @@
                 margin-right: 8px;
                 font-size: 13px;
             }
-
             .form-row input,
             .form-row select,
             .form-row textarea {
                 width: calc(100% - 113px);
                 min-width: 0;
             }
-
             .form-row input,
             .form-row select {
                 height: 32px;
             }
-
-
-            /* GENDER */
-
             .gender {
                 width: calc(100% - 113px);
                 display: flex;
@@ -364,23 +314,14 @@
                 font-size: 13px;
                 white-space: nowrap;
             }
-
             .gender input[type="radio"] {
                 width: auto;
                 margin-left: 5px;
                 margin-right: 10px;
             }
-
-
-            /* TEXTAREA */
-
             textarea {
                 height: 70px;
             }
-
-
-            /* BUTTONS */
-
             .but,
             .but1 {
                 width: 90px;
@@ -390,10 +331,6 @@
             .but1 {
                 margin-left: 15px;
             }
-
-
-    
-
         }
 
     </style>
@@ -477,8 +414,7 @@
                         Name :
                     </label>
 
-                    <input type="text"
-                        placeholder="Enter name">
+                    <input type="text" id="name" class="form-control" placeholder="Enter name">
 
                 </div>
 
@@ -489,8 +425,7 @@
                         Email :
                     </label>
 
-                    <input type="email"
-                        placeholder="Enter email">
+                    <input type="email" id="email" class="form-control" placeholder="Enter email">
 
                 </div>
 
@@ -503,9 +438,8 @@
                     </label>
 
                     <div class="gender">
-
                         Male
-                        <input type="radio"
+                        <input  type="radio"
                             name="gender">
 
                         Female
@@ -524,8 +458,7 @@
                         Ph Number :
                     </label>
 
-                    <input type="text"
-                        placeholder="Enter number">
+                    <input type="number" id="phone" class="form-control" placeholder="Enter number">
 
                 </div>
 
@@ -537,21 +470,16 @@
                         Age :
                     </label>
 
-                    <input type="number"
-                        placeholder="Enter age">
+                    <input type="number" id="age" class="form-control" placeholder="Enter age">
 
                 </div>
-
-
-               
-
-                <div class="form-row">
+             <div class="form-row">
 
                     <label>
                         Membership :
                     </label>
 
-                    <select>
+                    <select id="member" class="form-select">
 
                         <option>
                             1 month
@@ -572,29 +500,23 @@
                     </select>
 
                 </div>
-
-
            
-
                 <div class="form-row">
 
                     <label>
                         Starting date :
                     </label>
 
-                    <input type="date">
+                    <input type="date" id="stdate" class="form-control">
 
                 </div>
-
-
-
                 <div class="form-row">
 
                     <label>
                         Ending date :
                     </label>
 
-                    <input type="date">
+                    <input type="date"  id="edate" class="form-control">
 
                 </div>
 
@@ -606,31 +528,38 @@
                         Address :
                     </label>
 
-                    <textarea></textarea>
-
+                    <textarea  id="address"  class="form-control"></textarea>
                 </div>
-
-
                 <br>
-
-
-                <button class="but"
-                    type="submit">
-                    Submit
-                </button>
-
-                <button class="but1"
-                    type="reset">
-                    Clear
-                </button>
-
-
+                <button type="button" class="btn btn-success" onclick="alertfg()">Submit</button>
+                <button type="reset" class="btn btn-success">Clear</button>
             </form>
-
         </fieldset>
-
     </div>
-
+      <script>
+        function alertfg(){
+            let name=document.getElementById("name").value;
+            let email=document.getElementById("email").value;
+            let phone=document.getElementById("phone").value;
+            let age=document.getElementById("age").value;
+            let member=document.getElementById("member").value;
+            let stdate=document.getElementById("stdate").value;
+            let edate=document.getElementById("edate").value;
+            let address=document.getElementById("address").value;
+            
+           let gender = document.querySelector('input[name="gender"]:checked');
+           if(name=="" || email=="" || phone=="" || age=="" || member=="" || stdate==""
+            && edate=="" || address=="" || gender==null)
+     {
+        alert("Please  fill all the fields ☹️☹️");
+     }
+     else{
+        alert("Registration Successfull 🎉");
+        document.querySelector("form").reset();
+     }
+           
+        }
+      </script>
 
    
 
