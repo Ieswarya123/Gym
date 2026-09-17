@@ -238,7 +238,7 @@
 
       <div class="order-item">
         <span>Platinum Membership</span>
-        <span>$75.00 / month</span>
+        <span>₹7500 / month</span>
       </div>
 
       <p class="duration">
@@ -273,16 +273,16 @@
 
       <div class="order-item subtotal">
         <span>Subtotal</span>
-        <span>$75.00</span>
+        <span>₹7500</span>
       </div>
 
       <div class="total">
         <span>Total</span>
-        <span id="total">$75.00</span>
+        <span id="total">₹7500</span>
       </div>
 
       <p class="note">
-        You’ll be charged $75.00 every month for 2 months.
+        You’ll be charged ₹7500 every month for 2 months.
       </p>
 
     </div>
@@ -298,14 +298,14 @@
     let result = document.getElementById("result");
     let total = document.getElementById("total");
 
-    let price = 75;
+    let price = 7500;
 
     if (coupon == "GYM10") {
 
         let discount = price * 10 / 100;
         let finalAmount = price - discount;
 
-        total.innerHTML = "$" + finalAmount.toFixed(2);
+        total.innerHTML = "₹" + finalAmount.toFixed(2);
 
         result.innerHTML = "✓ Coupon Applied — 10% discount";
         result.style.color = "green";
@@ -313,7 +313,7 @@
 
     else {
 
-        total.innerHTML = "$75.00";
+        total.innerHTML = "₹7500";
 
         result.innerHTML = "✕ Invalid Coupon or coupon must be expired";
         result.style.color = "#b22222";
