@@ -403,7 +403,125 @@
     }
 
 }
-    </style>
+
+.bmi-section {
+    background: #111;
+    padding: 100px 5%;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bmi-content {
+    width: 100%;
+    max-width: 1000px;
+    text-align: center;
+}
+
+.bmi-small {
+    color: #ff4d00;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.bmi-content h2 {
+    color: white;
+    font-size: 45px;
+}
+
+.bmi-content h2 span {
+    color: #ff4d00;
+}
+
+.bmi-text {
+    color: #aaa;
+    max-width: 550px;
+    margin: 0 auto 40px;
+}
+
+.bmi-form {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.input-box {
+    text-align: left;
+}
+
+.input-box label {
+    display: block;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.input-box input {
+    width: 280px;
+    padding: 16px;
+    font-size: 16px;
+}
+
+.bmi-content button {
+    padding: 16px 40px;
+    background: #ff4d00;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#bmi-result {
+    color: white;
+    margin-top: 30px;
+    font-size: 22px;
+}
+@media (max-width: 600px) {
+
+    .bmi-section {
+        padding: 70px 20px;
+        min-height: auto;
+    }
+
+    .bmi-content h2 {
+        font-size: 30px;
+    }
+
+    .bmi-text {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+
+    .bmi-form {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .input-box {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .input-box input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .bmi-content button {
+        width: 280px;
+        padding: 14px;
+    }
+
+    #bmi-result {
+        font-size: 18px;
+    }
+}
+
+</style>
+
   </head>
   <body>
     <nav class="nav1">
@@ -469,6 +587,40 @@ This is the space to highlight the benefits you offer and what clients can gain 
       </div>
       </div>
       <div>
+        <section class="bmi-section">
+
+    <div class="bmi-content">
+
+        <p class="bmi-small">FITNESS CHECK</p>
+
+        <h2>CHECK YOUR <span>BMI</span></h2>
+
+        <p class="bmi-text">
+            Calculate your Body Mass Index and understand
+            your fitness level.
+        </p>
+
+        <div class="bmi-form">
+
+            <div class="input-box">
+                <label>Height</label>
+                <input type="number" id="height" placeholder="cm">
+            </div>
+
+            <div class="input-box">
+                <label>Weight</label>
+                <input type="number" id="weight" placeholder="kg">
+            </div>
+
+        </div>
+
+        <button onclick="calculateBMI()">CALCULATE BMI</button>
+
+        <div id="bmi-result"></div>
+
+    </div>
+
+</section>
       <b class="bas">BASEFIT</b> <br>
        <a href="./reg.html" class="bill2">Book a Trial classes Now</a>
      </div> 
@@ -483,5 +635,47 @@ This is the space to highlight the benefits you offer and what clients can gain 
         </ol>
     
     </div>
+    <script>
+ function calculateBMI() {
+
+    let height = document.getElementById("height").value;
+    let weight = document.getElementById("weight").value;
+
+    let display;
+
+    if (height == "" || weight == "") {
+        display = "Please enter height and weight";
+    }
+    else if (height <= 0 || weight <= 0) {
+        display = "Please enter valid height and weight";
+    }
+    else {
+
+        height = height / 100;
+
+        let bmi = weight / (height * height);
+
+        let category;
+
+        if (bmi < 18.5) {
+            category = "Underweight";
+        }
+        else if (bmi < 25) {
+            category = "Normal";
+        }
+        else if (bmi < 30) {
+            category = "Overweight";
+        }
+        else {
+            category = "Obese";
+        }
+
+        display = "Your BMI Value is: " + bmi.toFixed(2) +
+                  "<br>Category: " + category;
+    }
+
+    document.getElementById("bmi-result").innerHTML = display;
+}
+    </script>
 </body>
 </html>

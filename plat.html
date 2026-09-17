@@ -2,11 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Secure Checkout</title>
+
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
+      background-color: #f5f5f5;
       margin: 0;
       padding: 0;
     }
@@ -23,105 +29,298 @@
     header h1 {
       font-size: 20px;
       color: #333;
+      margin: 0;
+    }
+
+    header h1:nth-child(2) {
+      color: #b22222;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
     }
 
     .checkout-container {
       display: flex;
       justify-content: center;
-      margin: 40px auto;
+      margin: 50px auto;
       max-width: 900px;
-      gap: 30px;
+      gap: 25px;
     }
 
-    .message-box, .order-summary {
+    .message-box,
+    .order-summary {
       background-color: #fff;
       border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 20px;
+      border-radius: 10px;
+      padding: 25px;
       flex: 1;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .message-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 400px;
     }
 
     .message-box h2 {
       color: #b22222;
-      font-size: 18px;
+      font-size: 20px;
       margin-bottom: 10px;
     }
 
+    .message-box p {
+      color: #555;
+      line-height: 1.5;
+    }
+
+    .order-summary {
+      min-height: 400px;
+    }
+
     .order-summary h2 {
-      font-size: 18px;
-      margin-bottom: 15px;
+      font-size: 20px;
+      margin-bottom: 25px;
       color: #333;
     }
 
     .order-item {
       display: flex;
       justify-content: space-between;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
+      color: #444;
     }
-.coupon {
-    display: flex;
-    width: 300px;
-}
 
-.coupon input {
-    width: 200px;
-    padding: 10px;
-}
+    .duration {
+      color: #666;
+      font-size: 14px;
+      margin-bottom: 25px;
+    }
 
-.coupon button {
-    display: none;
-    padding: 10px;
-}
+    /* Coupon Section */
 
-/* Input click pannumbothu button varum */
-.coupon:focus-within button {
-    display: block;
-}
+    .coupon-section {
+      margin: 20px 0;
+      padding: 15px;
+      background-color: #fafafa;
+      border: 1px solid #eee;
+      border-radius: 8px;
+    }
+
+    .coupon-title {
+      margin: 0 0 10px;
+      font-size: 14px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .coupon {
+      display: flex;
+      width: 100%;
+    }
+
+    .coupon input {
+      flex: 1;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-right: none;
+      border-radius: 6px 0 0 6px;
+      outline: none;
+      font-size: 14px;
+    }
+
+    .coupon input:focus {
+      border-color: #b22222;
+    }
+
+    .coupon button {
+      padding: 12px 20px;
+      border: none;
+      background-color: #b22222;
+      color: white;
+      font-weight: bold;
+      border-radius: 0 6px 6px 0;
+      cursor: pointer;
+    }
+
+    .coupon button:hover {
+      background-color: #8f1b1b;
+    }
+
+    #result {
+      margin: 10px 0 0;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .subtotal {
+      margin-top: 25px;
+    }
 
     .total {
       font-weight: bold;
       display: flex;
       justify-content: space-between;
       margin-top: 15px;
+      padding-top: 15px;
+      border-top: 1px solid #ddd;
+      font-size: 17px;
+    }
+
+    .note {
+      margin-top: 15px;
+      font-size: 13px;
+      color: #777;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 700px) {
+
+      header {
+        padding: 15px;
+        gap: 10px;
+      }
+
+      header h1 {
+        font-size: 15px;
+      }
+
+      .checkout-container {
+        flex-direction: column;
+        margin: 25px 15px;
+      }
+
+      .message-box,
+      .order-summary {
+        min-height: auto;
+      }
     }
   </style>
 </head>
+
 <body>
+
   <header>
-    <h1>Secure Checkout💸💲</h1> <h1 style="color:#b22222">Platinum Membership</h1>
+    <h1>Secure Checkout 💸</h1>
+    <h1>platinum Membership</h1>
+
     <nav>
-      <a href="./plan.html">Home</a> 
+      <a href="./plan.html">Home</a>
     </nav>
   </header>
 
+
   <div class="checkout-container">
+
     <!-- Left Message -->
+
     <div class="message-box">
-      <h2>We can’t accept online payments</h2>
-      <p>Contact us for help with your order.</p>
+
+      <h2>We can't accept online payments</h2>
+
+      <p>
+        Contact us for help with your order.
+        Our team will assist you with the payment process.
+      </p>
+
     </div>
 
+
     <!-- Right Order Summary -->
+
     <div class="order-summary">
+
       <h2>Order Summary</h2>
+
       <div class="order-item">
         <span>Platinum Membership</span>
         <span>$75.00 / month</span>
       </div>
-      <p>Duration: 2 months</p>
 
-      <div class="order-item">
+      <p class="duration">
+        Duration: 2 months
+      </p>
+
+
+      <!-- Coupon -->
+
+      <div class="coupon-section">
+
+        <p class="coupon-title">Have a coupon?</p>
+
+        <div class="coupon">
+
+          <input
+            type="text"
+            id="coupon"
+            placeholder="Enter coupon code"
+          >
+
+          <button onclick="sil()">Apply</button>
+
+        </div>
+
+        <p id="result"></p>
+
+      </div>
+
+
+      <!-- Price -->
+
+      <div class="order-item subtotal">
         <span>Subtotal</span>
         <span>$75.00</span>
       </div>
+
       <div class="total">
         <span>Total</span>
-        <span>$75.00</span>
+        <span id="total">$75.00</span>
       </div>
-      <p style="margin-top:10px; font-size:13px; color:#555;">
-        You’ll be charged $25.00 every month for 2 months.
+
+      <p class="note">
+        You’ll be charged $75.00 every month for 2 months.
       </p>
+
     </div>
+
   </div>
+
+
+  <script>
+
+    function sil() {
+
+    let coupon = document.getElementById("coupon").value;
+    let result = document.getElementById("result");
+    let total = document.getElementById("total");
+
+    let price = 75;
+
+    if (coupon == "GYM10") {
+
+        let discount = price * 10 / 100;
+        let finalAmount = price - discount;
+
+        total.innerHTML = "$" + finalAmount.toFixed(2);
+
+        result.innerHTML = "✓ Coupon Applied — 10% discount";
+        result.style.color = "green";
+    }
+
+    else {
+
+        total.innerHTML = "$75.00";
+
+        result.innerHTML = "✕ Invalid Coupon or coupon must be expired";
+        result.style.color = "#b22222";
+    }
+}
+
+  </script>
+
 </body>
 </html>
