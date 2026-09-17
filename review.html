@@ -210,7 +210,9 @@
         .vis a:hover {
             color: #FF4D00;
         }
-
+  #rev{
+                color:white;
+            }
 
         /* MOBILE */
 
@@ -262,6 +264,7 @@
             .review-form {
                 width: 90%;
             }
+          
         }
 
     </style>
@@ -295,9 +298,10 @@
 
             <a href="./class.html">Classes |</a>
 
-            <a href="./review.html">Reviews |</a>
+            
 
-            <a href="reg.html">Registration</a>
+            <a href="reg.html">Registration |</a>
+            <a href="./review.html" id="rev">Review </a>
 
         </div>
 
@@ -662,7 +666,6 @@
 
 
             newReview.innerHTML = `
-
                 <div class="review-card">
 
                     <div class="stars">
@@ -682,7 +685,6 @@
                     </p>
 
                 </div>
-
             `;
 
 
@@ -708,8 +710,6 @@
         }
 
     </script>
-
-
 </body>
 
 </html>
