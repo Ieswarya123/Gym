@@ -2,269 +2,438 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Reviews - FitZone</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
 
     <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
 
         body {
             background-color: black;
             color: white;
         }
 
-        /* NAVBAR */
+
+        /* ================= NAVBAR ================= */
 
         .nav1 {
+
             color: white;
+
             display: flex;
+
             justify-content: space-between;
+
             align-items: center;
+
             padding: 20px;
+
             position: sticky;
+
             top: 0;
+
             background-color: #000000;
+
             z-index: 99999;
+
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         }
 
+
         .nav2 {
+
             display: flex;
+
             gap: 10px;
+
             align-items: center;
         }
 
+
         .logo {
+
             height: 80px;
+
             width: 80px;
+
             border-radius: 50%;
+
+            object-fit: cover;
         }
 
+
         .nav3 {
+
             font-size: 20px;
         }
 
+
         .nav3 a {
+
             text-decoration: none;
+
             color: #FF4D00;
+
+            margin: 0 3px;
         }
+
 
         .nav3 a:hover {
+
             color: white;
         }
 
 
-        /* HEADING */
+        #rev {
+
+            color: white;
+        }
+
+
+        /* ================= HEADING ================= */
 
         .head {
+
             color: white;
+
             text-align: center;
+
             font-size: 60px;
+
             margin-top: 60px;
         }
 
+
         .subhead {
+
             text-align: center;
+
             color: #ccc;
+
             font-size: 18px;
+
             margin-bottom: 50px;
         }
 
 
-        /* REVIEW SLIDER */
+        /* ================= REVIEW SLIDER ================= */
 
         .review-section {
+
             width: 80%;
+
             max-width: 900px;
+
             margin: auto;
         }
 
+
         .review-card {
+
             background-color: white;
+
             color: black;
+
             border-radius: 15px;
+
             min-height: 300px;
 
             display: flex;
+
             flex-direction: column;
+
             justify-content: center;
+
             align-items: center;
 
             text-align: center;
+
             padding: 40px;
+
             margin: 20px 60px;
         }
 
+
         .stars {
+
             color: #FF4D00;
+
             font-size: 30px;
+
             margin-bottom: 20px;
         }
+
 
         .review-text {
+
             font-size: 22px;
+
             font-style: italic;
+
             margin-bottom: 20px;
         }
 
+
         .review-name {
+
             font-size: 20px;
+
             font-weight: bold;
+
             margin-bottom: 5px;
         }
 
+
         .class-name {
+
             color: #FF4D00;
+
             font-size: 17px;
         }
 
 
-        /* BOOTSTRAP ARROWS */
+        /* ================= CAROUSEL ARROWS ================= */
 
         .carousel-control-prev-icon,
         .carousel-control-next-icon {
+
             background-color: #FF4D00;
+
             border-radius: 50%;
+
             padding: 20px;
+
             background-size: 50%;
         }
 
 
-        /* DOTS */
+        /* ================= INDICATORS ================= */
 
         .carousel-indicators [data-bs-target] {
+
             background-color: #FF4D00;
         }
 
 
-        /* REVIEW FORM */
+        /* ================= WRITE REVIEW ================= */
 
         .write-review {
+
             text-align: center;
+
             margin-top: 80px;
+
             margin-bottom: 60px;
         }
 
+
         .write-review h2 {
+
             color: #FF4D00;
+
             margin-bottom: 20px;
         }
 
+
+        .write-review p {
+
+            color: #ccc;
+        }
+
+
         .review-form {
+
             width: 80%;
+
             max-width: 600px;
+
             margin: auto;
 
             display: flex;
+
             flex-direction: column;
+
             gap: 15px;
         }
+
 
         .review-form input,
         .review-form select,
         .review-form textarea {
+
             padding: 12px;
+
             border: none;
+
             border-radius: 8px;
+
             font-size: 16px;
+
+            outline: none;
         }
 
+
+        .review-form input:focus,
+        .review-form select:focus,
+        .review-form textarea:focus {
+
+            outline: 2px solid #FF4D00;
+        }
+
+
         .review-form textarea {
+
             height: 120px;
+
             resize: none;
         }
 
+
         .review-form button {
+
             background-color: #FF4D00;
+
             color: white;
+
             border: none;
+
             padding: 12px;
+
             border-radius: 8px;
+
             font-size: 18px;
+
             cursor: pointer;
         }
 
+
         .review-form button:hover {
+
             background-color: white;
+
             color: black;
         }
 
 
-        /* FOOTER */
+        /* ================= FOOTER ================= */
 
         .vis {
+
             color: white;
+
             text-align: center;
+
             margin-top: 60px;
+
             padding-bottom: 30px;
         }
 
+
         .vis a {
+
             color: white;
+
             text-decoration: none;
         }
 
+
         .vis a:hover {
+
             color: #FF4D00;
         }
-  #rev{
-                color:white;
-            }
 
-        /* MOBILE */
+
+        /* ================= MOBILE ================= */
 
         @media screen and (max-width: 768px) {
 
+
             .nav1 {
+
                 flex-direction: column;
+
                 gap: 15px;
             }
 
+
             .nav3 {
+
                 font-size: 14px;
+
                 text-align: center;
+
                 line-height: 30px;
             }
 
+
             .head {
+
                 font-size: 40px;
+
                 margin-top: 40px;
             }
 
+
             .subhead {
+
                 font-size: 15px;
             }
 
+
             .review-section {
+
                 width: 100%;
             }
 
+
             .review-card {
+
                 margin: 20px 45px;
+
                 min-height: 280px;
+
                 padding: 25px;
             }
 
+
             .review-text {
+
                 font-size: 18px;
             }
 
+
             .stars {
+
                 font-size: 25px;
             }
 
+
             .carousel-control-prev-icon,
             .carousel-control-next-icon {
+
                 padding: 15px;
             }
 
+
             .review-form {
+
                 width: 90%;
             }
-          
+
         }
 
     </style>
@@ -275,13 +444,16 @@
 <body>
 
 
-    <!-- NAVBAR -->
+    <!-- ================= NAVBAR ================= -->
 
     <nav class="nav1">
 
+
         <div class="nav2">
 
-            <img src="./logg.jpg" alt="Logo" class="logo">
+            <img src="./logg.jpg"
+                 alt="Logo"
+                 class="logo">
 
             <h1>FitZone</h1>
 
@@ -290,18 +462,26 @@
 
         <div class="nav3">
 
-            <a href="index.html">Home |</a>
+            <a href="./index.html">
+                Home |
+            </a>
 
-            <a href="./about.html">About |</a>
+            <a href="./about.html">
+                About |
+            </a>
 
-            <a href="plan.html">Plans |</a>
+            <a href="./plan.html">
+                Plans |
+            </a>
 
-            <a href="./class.html">Classes |</a>
+            <a href="./class.html">
+                Classes |
+            </a>
 
-            
-
-            <a href="reg.html">Registration |</a>
-            <a href="./review.html" id="rev">Review </a>
+            <a href="./review.html"
+               id="rev">
+                Review
+            </a>
 
         </div>
 
@@ -309,11 +489,12 @@
 
 
 
-    <!-- HEADING -->
+    <!-- ================= HEADING ================= -->
 
     <h2 class="head">
         What Our Members Say
     </h2>
+
 
     <p class="subhead">
         Real experiences from our fitness community
@@ -321,9 +502,10 @@
 
 
 
-    <!-- REVIEW CAROUSEL -->
+    <!-- ================= REVIEW CAROUSEL ================= -->
 
     <div class="review-section">
+
 
         <div id="reviewCarousel"
              class="carousel slide"
@@ -332,131 +514,30 @@
 
             <!-- INDICATORS -->
 
-            <div class="carousel-indicators">
-
-                <button type="button"
-                        data-bs-target="#reviewCarousel"
-                        data-bs-slide-to="0"
-                        class="active">
-                </button>
-
-                <button type="button"
-                        data-bs-target="#reviewCarousel"
-                        data-bs-slide-to="1">
-                </button>
-
-                <button type="button"
-                        data-bs-target="#reviewCarousel"
-                        data-bs-slide-to="2">
-                </button>
-
+            <div class="carousel-indicators"
+                 id="reviewIndicators">
             </div>
 
 
 
             <!-- REVIEWS -->
 
-            <div class="carousel-inner" id="reviewCarouselInner">
-
-
-                <!-- REVIEW 1 -->
-
-                <div class="carousel-item active">
-
-                    <div class="review-card">
-
-                        <div class="stars">
-                            ⭐⭐⭐⭐⭐
-                        </div>
-
-                        <p class="review-text">
-                            "Amazing workout class!
-                            The trainer was very supportive."
-                        </p>
-
-                        <p class="review-name">
-                            — Priya
-                        </p>
-
-                        <p class="class-name">
-                            Base Strength
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- REVIEW 2 -->
-
-                <div class="carousel-item">
-
-                    <div class="review-card">
-
-                        <div class="stars">
-                            ⭐⭐⭐⭐
-                        </div>
-
-                        <p class="review-text">
-                            "Great trainers and good
-                            atmosphere. I really enjoyed it."
-                        </p>
-
-                        <p class="review-name">
-                            — Arun
-                        </p>
-
-                        <p class="class-name">
-                            Base Endurance
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- REVIEW 3 -->
-
-                <div class="carousel-item">
-
-                    <div class="review-card">
-
-                        <div class="stars">
-                            ⭐⭐⭐⭐⭐
-                        </div>
-
-                        <p class="review-text">
-                            "Very energetic workout session!
-                            Highly recommended."
-                        </p>
-
-                        <p class="review-name">
-                            — Ishika
-                        </p>
-
-                        <p class="class-name">
-                            Base HIT
-                        </p>
-
-                    </div>
-
-                </div>
-
+            <div class="carousel-inner"
+                 id="reviewCarouselInner">
 
             </div>
 
 
 
-            <!-- PREVIOUS -->
+            <!-- PREVIOUS BUTTON -->
 
             <button class="carousel-control-prev"
                     type="button"
                     data-bs-target="#reviewCarousel"
                     data-bs-slide="prev">
 
-                <span class="carousel-control-prev-icon"></span>
+                <span class="carousel-control-prev-icon">
+                </span>
 
                 <span class="visually-hidden">
                     Previous
@@ -466,14 +547,15 @@
 
 
 
-            <!-- NEXT -->
+            <!-- NEXT BUTTON -->
 
             <button class="carousel-control-next"
                     type="button"
                     data-bs-target="#reviewCarousel"
                     data-bs-slide="next">
 
-                <span class="carousel-control-next-icon"></span>
+                <span class="carousel-control-next-icon">
+                </span>
 
                 <span class="visually-hidden">
                     Next
@@ -481,31 +563,41 @@
 
             </button>
 
+
         </div>
 
     </div>
 
 
 
-    <!-- WRITE REVIEW -->
+    <!-- ================= WRITE REVIEW ================= -->
 
     <div class="write-review">
+
 
         <h2>
             Write a Review
         </h2>
+
 
         <p>
             Share your experience with our classes
         </p>
 
 
+
         <div class="review-form">
+
+
+            <!-- NAME -->
 
             <input type="text"
                    id="name"
                    placeholder="Your Name">
 
+
+
+            <!-- CLASS -->
 
             <select id="className">
 
@@ -527,6 +619,9 @@
 
             </select>
 
+
+
+            <!-- RATING -->
 
             <select id="rating">
 
@@ -557,14 +652,23 @@
             </select>
 
 
+
+            <!-- REVIEW -->
+
             <textarea id="reviewText"
-                      placeholder="Write your review">
-            </textarea>
+                      placeholder="Write your review"></textarea>
 
 
-            <button onclick="addReview()">
+
+            <!-- SUBMIT -->
+
+            <button type="button"
+                    onclick="addReview()">
+
                 Submit Review
+
             </button>
+
 
         </div>
 
@@ -572,7 +676,7 @@
 
 
 
-    <!-- FOOTER -->
+    <!-- ================= FOOTER ================= -->
 
     <div class="vis">
 
@@ -600,100 +704,116 @@
 
 
 
-    <!-- BOOTSTRAP JS -->
+    <!-- ================= BOOTSTRAP JS ================= -->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
 
 
 
-    <!-- REVIEW JAVASCRIPT -->
+    <!-- ================= REVIEW JAVASCRIPT ================= -->
 
     <script>
 
+
+        /* ==========================================
+           LOAD REVIEWS WHEN PAGE OPENS
+        ========================================== */
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            loadReviews
+        );
+
+
+
+        /* ==========================================
+           ADD NEW REVIEW
+        ========================================== */
+
         function addReview() {
+
 
             let name =
                 document.getElementById("name").value.trim();
 
+
             let className =
                 document.getElementById("className").value;
 
+
             let rating =
                 document.getElementById("rating").value;
+
 
             let reviewText =
                 document.getElementById("reviewText").value.trim();
 
 
-            // VALIDATION
 
-            if (name == "" ||
+            /* CHECK EMPTY FIELDS */
+
+            if (
+                name == "" ||
                 className == "" ||
                 rating == "" ||
-                reviewText == "") {
+                reviewText == ""
+            ) {
 
-                alert("Please fill all the fields");
+                alert("Please give the review");
 
                 return;
             }
 
 
-            // GET CAROUSEL
 
-            let carousel =
-                document.getElementById("reviewCarouselInner");
+            /* GET OLD REVIEWS */
 
-
-            // REMOVE ACTIVE FROM CURRENT REVIEW
-
-            let oldReviews =
-                carousel.querySelectorAll(".carousel-item");
-
-            oldReviews.forEach(function(item) {
-
-                item.classList.remove("active");
-
-            });
+            let reviews =
+                JSON.parse(
+                    localStorage.getItem("reviews")
+                ) || [];
 
 
-            // CREATE NEW REVIEW
 
-            let newReview =
-                document.createElement("div");
+            /* CREATE NEW REVIEW */
 
-            newReview.className =
-                "carousel-item active";
+            let newReview = {
 
+                name: name,
 
-            newReview.innerHTML = `
-                <div class="review-card">
+                className: className,
 
-                    <div class="stars">
-                        ${rating}
-                    </div>
+                rating: rating,
 
-                    <p class="review-text">
-                        "${reviewText}"
-                    </p>
+                reviewText: reviewText
 
-                    <p class="review-name">
-                        — ${name}
-                    </p>
-
-                    <p class="class-name">
-                        ${className}
-                    </p>
-
-                </div>
-            `;
+            };
 
 
-            // ADD NEW REVIEW TO SLIDER
 
-            carousel.appendChild(newReview);
+            /* ADD NEW REVIEW TO ARRAY */
+
+            reviews.push(newReview);
 
 
-            // CLEAR FORM
+
+            /* SAVE TO LOCAL STORAGE */
+
+            localStorage.setItem(
+                "reviews",
+                JSON.stringify(reviews)
+            );
+
+
+
+            /* DISPLAY REVIEWS */
+
+            loadReviews();
+
+
+
+            /* CLEAR FORM */
 
             document.getElementById("name").value = "";
 
@@ -704,12 +824,140 @@
             document.getElementById("reviewText").value = "";
 
 
-        
+
             alert("Review submitted successfully!");
 
         }
 
+
+
+       function loadReviews() {
+
+    let reviews =
+        JSON.parse(localStorage.getItem("reviews")) || [];
+
+
+    // Default 3 reviews
+    if (reviews.length == 0) {
+
+        reviews = [
+
+            {
+                name: "Priya",
+                className: "Base Strength",
+                rating: "⭐⭐⭐⭐⭐",
+                reviewText: "Amazing workout class! The trainer was very supportive."
+            },
+
+            {
+                name: "Arun",
+                className: "Base Endurance",
+                rating: "⭐⭐⭐⭐",
+                reviewText: "Great trainers and good atmosphere. I really enjoyed it."
+            },
+
+            {
+                name: "Ishika",
+                className: "Base HIT",
+                rating: "⭐⭐⭐⭐⭐",
+                reviewText: "Very energetic workout session! Highly recommended."
+            }
+
+        ];
+
+        // Save default reviews
+        localStorage.setItem(
+            "reviews",
+            JSON.stringify(reviews)
+        );
+    }
+
+
+    let carousel =
+        document.getElementById("reviewCarouselInner");
+
+    let indicators =
+        document.getElementById("reviewIndicators");
+
+
+    carousel.innerHTML = "";
+
+    indicators.innerHTML = "";
+
+
+    reviews.forEach(function(review, index) {
+
+        let newReview =
+            document.createElement("div");
+
+        newReview.className = "carousel-item";
+
+
+        if (index == 0) {
+            newReview.classList.add("active");
+        }
+
+
+        newReview.innerHTML = `
+
+            <div class="review-card">
+
+                <div class="stars">
+                    ${review.rating}
+                </div>
+
+                <p class="review-text">
+                    "${review.reviewText}"
+                </p>
+
+                <p class="review-name">
+                    — ${review.name}
+                </p>
+
+                <p class="class-name">
+                    ${review.className}
+                </p>
+
+            </div>
+
+        `;
+
+
+        carousel.appendChild(newReview);
+
+
+        // Create indicator
+
+        let indicator =
+            document.createElement("button");
+
+        indicator.type = "button";
+
+        indicator.setAttribute(
+            "data-bs-target",
+            "#reviewCarousel"
+        );
+
+        indicator.setAttribute(
+            "data-bs-slide-to",
+            index
+        );
+
+
+        if (index == 0) {
+            indicator.classList.add("active");
+        }
+
+
+        indicators.appendChild(indicator);
+
+    });
+
+}
+
     </script>
+
+
 </body>
 
 </html>

@@ -2,566 +2,711 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-    <title>Registration  </title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <title>FitZone Registration</title>
+
+
     <style>
 
         * {
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
         }
 
+
         body {
-            margin: 0;
-            padding: 0;
-            background-color: black;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background: black;
             overflow-x: hidden;
         }
+
+
+        /* ================= NAVBAR ================= */
+
         .nav1 {
             color: white;
+
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px;
+
+            padding: 15px 30px;
+
+            background-color: #000;
+
             position: sticky;
             top: 0;
-            background-color: #000000;
-            z-index: 99999;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+
+            z-index: 1000;
+
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
         }
+
 
         .nav2 {
             display: flex;
-            gap: 20px;
             align-items: center;
+            gap: 15px;
         }
 
+
         .logo {
-            height: 80px;
-            width: 80px;
+            width: 65px;
+            height: 65px;
+
             border-radius: 50%;
+
+            object-fit: cover;
         }
+
 
         .nav2 h1 {
             margin: 0;
+            font-size: 28px;
         }
 
+
         .nav3 {
-            font-size: 20px;
+            font-size: 18px;
         }
+
 
         .nav3 a {
             text-decoration: none;
-            color: #FF4D00;
+            color: #ff4d00;
+            margin: 0 5px;
         }
+
 
         .nav3 a:hover {
             color: white;
         }
 
+
         #reg {
             color: white;
         }
-        #field {
-            width: 700px;
-            min-height: 600px;
-            background-color: white;
-            border: 5px solid grey;
-            text-align: center;
-            margin: 5% auto;
-            padding: 5px;
+
+
+        /* ================= BACKGROUND ================= */
+
+        .background-img {
+
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            filter: blur(7px);
+
+            transform: scale(1.05);
+
+            z-index: -2;
         }
 
-        #form {
-            color: orangered;
-            font-family: 'Lucida Sans',
-                'Lucida Sans Regular',
-                'Lucida Grande',
-                'Lucida Sans Unicode',
-                Geneva,
-                Verdana,
-                sans-serif;
+
+        .overlay {
+
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background: rgba(0, 0, 0, 0.65);
+
+            z-index: -1;
+        }
+
+
+        /* ================= FORM CONTAINER ================= */
+
+        .form-container {
+
+            width: 650px;
+
+            max-width: 90%;
+
+            margin: 50px auto;
+
+            padding: 35px 45px;
+
+            background: rgba(20, 20, 20, 0.92);
+
+            border: 1px solid rgba(255, 77, 0, 0.7);
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 10px 40px rgba(0, 0, 0, 0.8),
+                0 0 20px rgba(255, 77, 0, 0.15);
+
+            color: white;
+        }
+
+
+        /* ================= TITLE ================= */
+
+        .form-title {
+
+            text-align: center;
+
+            margin-bottom: 30px;
+        }
+
+
+        .form-title img {
+
+            width: 65px;
+            height: 65px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            margin-bottom: 10px;
+        }
+
+
+        .form-title h1 {
+
+            color: #ff4d00;
 
             font-size: 30px;
-            font-weight: bolder;
-        }
-        form {
-            width: 500px;
-            margin: 20px auto;
+
+            margin-bottom: 5px;
         }
 
-        .logo1 {
-            height: 80px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-            margin-bottom: 20px;
-        }
 
-        .logo1 .logo {
-            height: 60px;
-            width: 60px;
-        }
+        /* ================= INPUT ROW ================= */
 
-        .logo1 h1 {
-            color: black;
-            font-size: 25px;
-        }
         .form-row {
+
             display: flex;
+
             align-items: center;
-            margin-bottom: 15px;
+
+            margin-bottom: 18px;
         }
 
-        .form-row label {
-            width: 130px;
-            text-align: right;
-            margin-right: 10px;
-            color: black;
+
+        .form-row > label {
+
+            width: 150px;
+
+            color: white;
+
             font-size: 15px;
-        }
 
-        .form-row input,
-        .form-row select,
-        .form-row textarea {
-            width: 260px;
-            box-sizing: border-box;
-        }
-
-        .form-row input,
-        .form-row select {
-            height: 32px;
+            font-weight: 500;
         }
 
 
+        /* Text input, select and textarea */
+
+        .form-row > input,
+        .form-row > select,
+        .form-row > textarea {
+
+            flex: 1;
+
+            padding: 11px 12px;
+
+            background: #222;
+
+            color: white;
+
+            border: 1px solid #555;
+
+            border-radius: 6px;
+
+            outline: none;
+        }
+
+
+        .form-row > input:focus,
+        .form-row > select:focus,
+        .form-row > textarea:focus {
+
+            border-color: #ff4d00;
+
+            box-shadow: 0 0 5px rgba(255, 77, 0, 0.4);
+        }
+
+
+        input::placeholder,
+        textarea::placeholder {
+
+            color: #888;
+        }
+
+
+        /* ================= GENDER ================= */
 
         .gender {
+
+            flex: 1;
+
             display: flex;
+
             align-items: center;
-            width: 260px;
-            color: black;
+
+            gap: 8px;
+
+            color: white;
         }
+
 
         .gender input[type="radio"] {
-            width: auto;
-            margin: 0 15px 0 5px;
+
+            width: 16px;
+
+            height: 16px;
+
+            flex: 0 0 auto;
+
+            padding: 0;
+
+            margin: 0 8px 0 0;
+
+            accent-color: #ff4d00;
+
+            cursor: pointer;
         }
 
 
-      
+        .gender span {
+
+            cursor: default;
+        }
+
+
+        /* ================= TEXTAREA ================= */
 
         textarea {
-            height: 80px;
-            resize: none;
+
+            min-height: 90px;
+
+            resize: vertical;
         }
 
 
-        
-        input:focus,
-        select:focus,
-        textarea:focus {
-            background-color: aquamarine;
+        /* ================= BUTTONS ================= */
+
+        .button-container {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 15px;
+
+            margin-top: 25px;
         }
-        .but {
-            border: solid 2px black;
-            color: black;
-            width: 100px;
-            height: 35px;
-            border-radius: 3px;
+
+
+        .submit-btn,
+        .clear-btn {
+
+            width: 120px;
+
+            padding: 11px;
+
+            border: none;
+
+            border-radius: 6px;
+
+            font-size: 15px;
+
+            font-weight: bold;
+
             cursor: pointer;
+
+            transition: 0.3s;
         }
 
-        .but:hover {
-            background-color: blue;
+
+        .submit-btn {
+
+            background: #ff4d00;
+
             color: white;
         }
 
-        .but1 {
-            border: solid 2px black;
-            color: black;
-            width: 100px;
-            height: 35px;
-            border-radius: 3px;
-            margin-left: 30px;
-            cursor: pointer;
+
+        .submit-btn:hover {
+
+            background: #e64400;
+
+            transform: translateY(-2px);
         }
 
-        .but1:hover {
-            background-color: blue;
+
+        .clear-btn {
+
+            background: #444;
+
             color: white;
         }
-        @media screen and (min-width: 601px) and (max-width: 900px) {
 
-            .nav1 {
-                padding: 15px;
-            }
 
-            .logo {
-                width: 65px;
-                height: 65px;
-            }
+        .clear-btn:hover {
 
-            .nav3 a {
-                font-size: 19px;
-            }
+            background: #666;
 
-            #field {
-                width: 90%;
-                margin: 5% auto;
-            }
-
-            form {
-                width: 500px;
-                max-width: 100%;
-            }
-
+            transform: translateY(-2px);
         }
-        @media screen and (max-width: 600px) {
 
-            body {
-                width: 100%;
-                overflow-x: hidden;
-            }
+
+        /* ================= BACK TO LOGIN ================= */
+
+        .back {
+
+            display: block;
+
+            text-align: center;
+
+            margin-top: 20px;
+
+            color: #aaa;
+
+            text-decoration: none;
+
+            font-size: 14px;
+        }
+
+
+        .back:hover {
+
+            color: #ff4d00;
+        }
+
+
+        /* ================= MOBILE ================= */
+
+        @media screen and (max-width: 700px) {
+
             .nav1 {
-                padding: 10px;
+
                 flex-direction: column;
-                gap: 10px;
+
+                gap: 12px;
+
+                padding: 12px;
             }
 
-            .nav2 {
-                display: flex;
-                gap: 10px;
-                align-items: center;
-            }
-
-            .logo {
-                width: 60px;
-                height: 60px;
-            }
-
-            .nav2 h1 {
-                font-size: 28px;
-            }
 
             .nav3 {
-                width: 100%;
+
                 text-align: center;
+
                 line-height: 2;
             }
 
-            .nav3 a {
-                font-size: 20px;
-            }
-            #field {
-                width: 95%;
-                min-height: auto;
+
+            .form-container {
+
+                width: 92%;
+
+                padding: 25px 20px;
+
                 margin: 30px auto;
-                padding: 5px;
             }
 
-            #form {
+
+            .form-row {
+
+                flex-direction: column;
+
+                align-items: stretch;
+
+                gap: 7px;
+            }
+
+
+            .form-row > label {
+
+                width: 100%;
+
+                font-size: 14px;
+            }
+
+
+            .form-row > input,
+            .form-row > select,
+            .form-row > textarea {
+
+                width: 100%;
+            }
+
+
+            .gender {
+
+                width: 100%;
+            }
+
+
+            .form-title h1 {
+
                 font-size: 25px;
             }
-            form {
-                width: 100%;
-                margin: 15px auto;
-                padding: 5px;
-            }
-            .logo1 {
-                width: 100%;
-                height: auto;
-                margin-bottom: 20px;
-            }
 
-            .logo1 .logo {
-                width: 55px;
-                height: 55px;
-            }
-
-            .logo1 h1 {
-                font-size: 22px;
-            }
-            .form-row {
-                display: flex;
-                align-items: center;
-                width: 100%;
-                margin-bottom: 15px;
-            }
-
-            .form-row label {
-                width: 105px;
-                min-width: 105px;
-                text-align: right;
-                margin-right: 8px;
-                font-size: 13px;
-            }
-            .form-row input,
-            .form-row select,
-            .form-row textarea {
-                width: calc(100% - 113px);
-                min-width: 0;
-            }
-            .form-row input,
-            .form-row select {
-                height: 32px;
-            }
-            .gender {
-                width: calc(100% - 113px);
-                display: flex;
-                align-items: center;
-                font-size: 13px;
-                white-space: nowrap;
-            }
-            .gender input[type="radio"] {
-                width: auto;
-                margin-left: 5px;
-                margin-right: 10px;
-            }
-            textarea {
-                height: 70px;
-            }
-            .but,
-            .but1 {
-                width: 90px;
-                height: 35px;
-            }
-
-            .but1 {
-                margin-left: 15px;
-            }
         }
 
     </style>
+
 </head>
 
 
 <body>
 
 
-    <!-- NAVBAR -->
+    <!-- ================= BACKGROUND IMAGE ================= -->
 
-    <nav class="nav1">
+    <img src="./signup.jpg"
+         class="background-img"
+         alt="Gym Background">
 
-        <div class="nav2">
+    <div class="overlay"></div>
 
-            <img src="./logg.jpg" alt="Logo" class="logo">
 
-            <h1>FitZone</h1>
+
+    <!-- ================= REGISTRATION FORM ================= -->
+
+    <div class="form-container">
+
+
+        <div class="form-title">
+
+            <img src="./logg.jpg"
+                 alt="FitZone Logo">
+
+            <h1>FitZone Registration</h1>
 
         </div>
 
 
-        <div class="nav3">
 
-            <a href="index.html" target="_self">
-                Home |
+        <form>
+
+
+            <!-- NAME -->
+
+            <div class="form-row">
+
+                <label>Name :</label>
+
+                <input type="text"
+                       id="name"
+                       placeholder="Enter your name">
+
+            </div>
+
+
+
+            <!-- EMAIL -->
+
+            <div class="form-row">
+
+                <label>Email :</label>
+
+                <input type="email"
+                       id="email"
+                       placeholder="Enter your email">
+
+            </div>
+
+
+
+            <!-- GENDER -->
+
+            <div class="form-row">
+
+                <label>Gender :</label>
+
+                <div class="gender">
+
+                    <span>Male</span>
+
+                    <input type="radio"
+                           name="gender"
+                           value="Male">
+
+
+                    <span>Female</span>
+
+                    <input type="radio"
+                           name="gender"
+                           value="Female">
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PHONE -->
+
+            <div class="form-row">
+
+                <label>Phone Number :</label>
+
+                <input type="tel"
+                       id="phone"
+                       maxlength="10"
+                       pattern="[0-9]{10}"
+                       placeholder="Enter 10 digit number">
+
+            </div>
+
+
+
+            <!-- AGE -->
+
+            <div class="form-row">
+
+                <label>Age :</label>
+
+                <input type="number"
+                       id="age"
+                       placeholder="Enter your age">
+
+            </div>
+
+
+
+            <!-- ADDRESS -->
+
+            <div class="form-row">
+
+                <label>Address :</label>
+
+                <textarea id="address"
+                          placeholder="Enter your address"></textarea>
+
+            </div>
+
+
+
+            <!-- BUTTONS -->
+
+            <div class="button-container">
+
+                <button type="button"
+                        class="submit-btn"
+                        onclick="alertfg()">
+
+                    Submit
+
+                </button>
+
+
+                <button type="reset"
+                        class="clear-btn">
+
+                    Clear
+
+                </button>
+
+            </div>
+
+
+            <!-- BACK TO LOGIN -->
+
+            <a href="./login.html"
+               class="back">
+
+                ← Back to Login
+
             </a>
 
-            <a href="./about.html">
-                About |
-            </a>
 
-            <a href="plan.html">
-                Plans |
-            </a>
+        </form>
 
-            <a href="./class.html">
-                Classes |
-            </a>
-
-            <a href="reg.html" id="reg">
-                Registration |
-            </a>
-             <a href="./review.html">Review</a>
-        </div>
-
-    </nav>
-
-
-    <!-- REGISTRATION FORM -->
-
-    <div class="form">
-
-        <fieldset id="field">
-
-            <legend id="form">
-                FitZone
-            </legend>
-
-
-            <form>
-
-
-                <div class="logo1">
-
-                    <img src="./logg.jpg"
-                        alt="Logo"
-                        class="logo">
-
-                    <h1>
-                        FitZone
-                    </h1>
-
-                </div>
-
-
-
-                <div class="form-row">
-
-                    <label>
-                        Name :
-                    </label>
-
-                    <input type="text" id="name" class="form-control" placeholder="Enter name">
-
-                </div>
-
-
-                <div class="form-row">
-
-                    <label>
-                        Email :
-                    </label>
-
-                    <input type="email" id="email" class="form-control" placeholder="Enter email">
-
-                </div>
-
-
-
-                <div class="form-row">
-
-                    <label>
-                        Gender :
-                    </label>
-
-                    <div class="gender">
-                        Male
-                        <input  type="radio"
-                            name="gender">
-
-                        Female
-                        <input type="radio"
-                            name="gender">
-
-                    </div>
-
-                </div>
-
-
-             
-                <div class="form-row">
-
-                    <label>
-                        Ph Number :
-                    </label>
-
-                    <input type="number" id="phone" class="form-control" placeholder="Enter number">
-
-                </div>
-
-
-
-                <div class="form-row">
-
-                    <label>
-                        Age :
-                    </label>
-
-                    <input type="number" id="age" class="form-control" placeholder="Enter age">
-
-                </div>
-             <div class="form-row">
-
-                    <label>
-                        Membership :
-                    </label>
-
-                    <select id="member" class="form-select">
-
-                        <option>
-                            1 month
-                        </option>
-
-                        <option>
-                            3 months
-                        </option>
-
-                        <option>
-                            6 months
-                        </option>
-
-                        <option>
-                            1 year
-                        </option>
-
-                    </select>
-
-                </div>
-           
-                <div class="form-row">
-
-                    <label>
-                        Starting date :
-                    </label>
-
-                    <input type="date" id="stdate" class="form-control">
-
-                </div>
-                <div class="form-row">
-
-                    <label>
-                        Ending date :
-                    </label>
-
-                    <input type="date"  id="edate" class="form-control">
-
-                </div>
-
-
-
-                <div class="form-row">
-
-                    <label>
-                        Address :
-                    </label>
-
-                    <textarea  id="address"  class="form-control"></textarea>
-                </div>
-                <br>
-                <button type="button" class="btn btn-success" onclick="alertfg()">Submit</button>
-                <button type="reset" class="btn btn-success">Clear</button>
-            </form>
-        </fieldset>
     </div>
-      <script>
-        function alertfg(){
-            let name=document.getElementById("name").value;
-            let email=document.getElementById("email").value;
-            let phone=document.getElementById("phone").value;
-            let age=document.getElementById("age").value;
-            let member=document.getElementById("member").value;
-            let stdate=document.getElementById("stdate").value;
-            let edate=document.getElementById("edate").value;
-            let address=document.getElementById("address").value;
-            
-           let gender = document.querySelector('input[name="gender"]:checked');
-           if(name=="" || email=="" || phone=="" || age=="" || member=="" || stdate==""
-            && edate=="" || address=="" || gender==null)
-     {
-        alert("Please  fill all the fields ☹️☹️");
-     }
-     else{
-        alert("Registration Successfull 🎉");
-        document.querySelector("form").reset();
-     }
-           
-        }
-      </script>
 
-   
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        function alertfg() {
+
+
+            let name =
+                document.getElementById("name").value;
+
+
+            let email =
+                document.getElementById("email").value;
+
+
+            let phone =
+                document.getElementById("phone").value;
+
+
+            let age =
+                document.getElementById("age").value;
+
+
+            let address =
+                document.getElementById("address").value;
+
+
+            let gender =
+                document.querySelector(
+                    'input[name="gender"]:checked'
+                );
+
+
+            /* Check empty fields */
+
+            if (
+                name == "" ||
+                email == "" ||
+                phone == "" ||
+                age == "" ||
+                address == "" ||
+                gender == null
+            ) {
+
+                alert(
+                    "Please fill all the fields ☹️"
+                );
+
+            }
+
+
+            else {
+
+                alert(
+                    "Registration Successful 🎉"
+                );
+
+                document.querySelector("form").reset();
+
+            }
+
+        }
+
+    </script>
 
 
 </body>
