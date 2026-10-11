@@ -253,16 +253,7 @@
                        placeholder="Enter your password">
 
             </div>
-
-<!-- 
-            <div class="forgot">
-
-                <a href="./forgot-pass">
-                    Forgot Password?
-                </a>
-
-            </div> -->
-
+            <p id="result"></p>
 
             <button type="submit" class="login-btn">
                 Login
@@ -283,7 +274,6 @@
 
     </div>
 
-
     <!-- JavaScript -->
 
     <script>
@@ -302,12 +292,14 @@
             let password =
                 document.getElementById("password").value;
 
-
+            let result=document.getElementById("result");
             // Check empty fields
 
             if (email == "" || password == "") {
 
-                alert("Please fill all the fields");
+               
+                result.innerHTML="Please fill all the fields";
+                result.style.color="red";
 
             }
 
@@ -315,22 +307,18 @@
             // Check login details
 
             else if (
-                email == "ishu@gmail.com" &&
-                password == "Ishu2006"
+                email == "ishu254@gmail.com" &&
+                password == "ishu2006"
             ) {
-
-                alert("Login successful");
-
                 window.location.href = "./index.html";
 
             }
-
-
             // Wrong login details
 
             else {
 
-                alert("Login failed");
+                result.innerHTML="Invalid email or password";
+                result.style.color="red";
 
             }
 
