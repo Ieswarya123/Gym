@@ -8,6 +8,7 @@
     <style>
         * {
             box-sizing: border-box;
+            
         }
         body {
             margin: 0;
@@ -25,7 +26,7 @@
             width: 450px;
             padding: 30px;
             background-color: #222;
-            border-radius: 10px;
+            border-radius: 10px ;
         }
 
         h1 {
@@ -73,9 +74,54 @@
             color: #aaa;
             text-decoration: none;
         }
+        
+        .background-img {
+
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            filter: blur(7px);
+
+            transform: scale(1.05);
+
+            z-index: -2;
+        }
+
+
+        .overlay {
+
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background: rgba(0, 0, 0, 0.65);
+
+            z-index: -1;
+        }
+
+
+
     </style>
 </head>
 <body>
+    
+    <img src="./signup.jpg"
+         class="background-img"
+         alt="Gym Background">
+
+    <div class="overlay"></div>
+
     <div class="booking-box">
         <h1>Book Your Class</h1>
         <form onsubmit="alertfg()">
